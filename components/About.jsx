@@ -87,7 +87,7 @@ const About = ({scrollYProgress}) => {
                      </p>
                 </div>
                 <div className='flex justify-center items-start gap-4 mb-5'>
-                    <Image src='/dhakacollege.png' width={1000} height={1000} alt='Google' className='h-16 w-16 bg-white shadow-lg shadow-gray-700 rounded-lg p-2'/>
+                    <Image src='/dhakacollege.png' width={1000} height={1000} alt='dhaka college' className='h-16 w-16 bg-white shadow-lg shadow-gray-700 rounded-lg p-2'/>
                      <p className='text-md font-bold  text-left'>Higher Secondary, Dhaka College
                      </p>
                 </div>
