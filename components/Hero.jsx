@@ -24,7 +24,7 @@ const Hero = ({ scrollYProgress }) => {
   return (
    
     <motion.section
-      className="flex w-full h-[100vh] justify-center items-center overflow-x-hidden select-none [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] z-10 relative"
+      className="flex w-full h-[100vh] justify-center items-center overflow-x-hidden select-none [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] z-10 relative sm:overflow-x-hidden sm:w-full"
       ref={scope}
       style={{ scale, rotate }}
       
@@ -53,10 +53,10 @@ const Hero = ({ scrollYProgress }) => {
           cursorChar={"|"}
         />
       
-        <Button linkString="/resumeYousuf.pdf" target="_blank" ButttonName={<span className="flex items-center justify-center font-bold font-[exo]">Resume</span>} classNames="text-xl font-bold z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-3 w-40 cursor-pointer"/>
+        <Button linkString="/resumeYousufMohammad.pdf" target="_blank" ButttonName={<span className="flex items-center justify-center font-bold font-[exo]">Resume</span>} classNames="text-xl font-bold z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-3 w-40 cursor-pointer"/>
       </motion.div>
 
-      <Floating sensitivity={-1} className="overflow-hidden h-screen w-screen">
+      <Floating sensitivity={-1} className="hidden overflow-hidden h-screen w-screen md:block">
         <FloatingElement depth={0.5} className="top-[10%] left-[12%]">
           <motion.img
             initial={{ opacity: 0 }}

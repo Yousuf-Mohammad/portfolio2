@@ -62,8 +62,8 @@ const Projects = () => {
     }, 300);
   }, []);
   return (
-    <div id='projects' className='sticky top-0 flex flex-col justify-center items-centerbg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] md:min-h-screen rounded-2xl p-24  h-fit'>
-        <h1 className='text-7xl mb-10 font-bold font-[exo] text-gray-700 text-center underline underline-offset-4'>Some Of My Projects</h1>
+    <div id='projects' className='sticky top-0 flex flex-col justify-center items-center bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] md:min-h-screen rounded-2xl p-24  h-full'>
+        <h1 className='md:text-6xl text-4xl md:mb-10 font-bold font-[exo] text-gray-700 text-center underline underline-offset-4'>Some Of My Projects</h1>
         
     <div
       className=" w-full  dark:bg-gradient-to-b from-black from-10% to-gray-950 to-100%  rounded-md  "

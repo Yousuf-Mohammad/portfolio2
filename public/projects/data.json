@@ -28,7 +28,7 @@
       ],
       "description": "A highly interactive and visually dynamic website for a game, utilizing React.js, GSAP, CSS, Tailwind CSS, and Framer Motion to create a seamless and engaging user experience. The website features advanced animations and interactive elements, enhancing user immersion and bringing the game's essence to life. This project showcases a high level of creativity and technical expertise in front-end development and motion design.",
       "link":"https://rezentry.netlify.app/",
-      "github":"/"
+      "github":"https://github.com/Yousuf-Mohammad/zentry"
       
     },
     {
@@ -47,7 +47,7 @@
       ],
       "description": "Visually immersive website using React.js, GSAP, CSS, SCSS, Tailwind CSS, and Three.js, integrating advanced animations and interactive elements. The website features 3D object rendering, enhancing user engagement and delivering a unique, dynamic experience. This project demonstrates expertise in front-end development, animation, and 3D web technologies.",
       "link":"https://iphone-threejs.netlify.app/",
-      "github":"/"
+      "github":"https://github.com/Yousuf-Mohammad/iphone-threeJS"
       
     },
     {
@@ -85,7 +85,7 @@
       ],
       "description": "Developed a feature-rich e-commerce website tailored for travelers, offering a wide range of adventure tours and travel equipment. The platform is built using React.js, Redux, Bootstrap, and CSS to deliver an interactive and user-friendly shopping experience.For the backend, I implemented Node.js and Express.js, connected to MongoDB for efficient data management. Authentication is secured using JWT and bcrypt, ensuring a safe and seamless user experience. This project highlights expertise in full-stack web development, secure authentication, and e-commerce functionality",
       "link":"https://musafirs-den.onrender.com/",
-      "github":"/"
+      "github":"https://github.com/Yousuf-Mohammad/MusafirDen"
       
     },
     {

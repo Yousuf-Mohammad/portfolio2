@@ -21,8 +21,8 @@ export default function ContactForm() {
   }
   return (
     <div>
-    <div className="isolate  [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] px-6 py-24 h-screen sm:py-32 lg:px-8 rounded-2xl relative z-10 flex justify-center items-center">
-      <div className=' bg-slate-800 p-12 w-1/3 rounded-2xl  shadow-2xl shadow-gray-600'>
+    <div className="isolate  [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] md:px-6 md:py-24 md:h-screen rounded-2xl relative z-10 flex justify-center items-center">
+      <div className=' bg-slate-800 md:p-12 p-5 md:w-1/3 w-full rounded-2xl  shadow-2xl shadow-gray-600'>
       
       {done ? 
       <h1 className='text-3xl font-semibold tracking-tight text-balance text-gray-200 text-center'>Thank you for contacting me</h1> : <form onSubmit={sendEmail} ref={formRef} className="mx-auto mt-4 max-w-lg sm:mt-4">
@@ -118,9 +118,9 @@ export default function ContactForm() {
       </form>}
       </div>
     </div>
-     <div className="sticky z-0 bottom-0 left-0 w-full h-80 bg-white flex justify-center items-center">
-     <div className="relative overflow-hidden w-full h-full flex justify-end px-12 text-right items-start py-12 text-primaryRed">
-       <div className="flex flex-row space-x-12 sm:pace-x-16  md:space-x-24 text-sm sm:text-lg md:text-xl">
+     <div className="sticky z-0 bottom-0 left-0 w-full h-80  bg-white flex justify-center items-center">
+     <div className="relative overflow-hidden w-full h-full flex justify-end md:px-12 px-4 text-right items-start py-12 text-primaryRed">
+       <div className="flex flex-row space-x-12 sm:pace-x-16  md:space-x-24 text-sm sm:text-lg md:text-xl ">
          <ul className='flex flex-col space-y-2'>
           <li className=""><span className='flex gap-2'> <MapPinHouse/>Dhaka, Bangladesh</span></li>
            <li className=""><span className='flex gap-2'> <Phone/> +880 1521331371</span></li>
@@ -136,7 +136,7 @@ export default function ContactForm() {
          </ul>
        </div>
      
-       <h2 className="absolute bottom-20 left-10  translate-y-1/3 sm:text-[100px]  text-[5px] text-slate-950 font-[rockybilly]">
+       <h2 className="absolute bottom-20 left-10  translate-y-1/3 text-3xl  md:text-8xl font-bold text-slate-950 font-[rockybilly]">
          Yousuf Mohammad
        </h2>
       
