@@ -14,9 +14,9 @@ const Footer = React.memo(() => {
             <ContactInfo icon={<Send />} text="yousuf.mohammad8783@gmail.com" />
           </ul>
           <ul className="space-y-2">
-            <SocialLink href="https://github.com/yousufmohammad" text="GitHub" />
-            <SocialLink href="https://linkedin.com/in/yousufmohammad" text="LinkedIn" />
-            <SocialLink href="https://facebook.com/yousufmohammad" text="Facebook" />
+            <SocialLink href="https://github.com/yousuf-mohammad" text="GitHub" />
+            <SocialLink href="https://www.linkedin.com/in/yousuf-mohammad-a9a131223/" text="LinkedIn" />
+            <SocialLink href="https://www.facebook.com/yousuf313/" text="Facebook" />
           </ul>
         </div>
 
