@@ -29,7 +29,7 @@ const Hero = ({ scrollYProgress }) => {
         className="z-50 text-center space-y-4 items-center flex flex-col mix-blend-difference"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.88, delay: 1.5 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <h1 className="text-5xl md:text-[6vw] font-black z-50 mix-blend-difference text-gray-300 font-['exo']">
           Yousuf Mohammad
