@@ -75,13 +75,16 @@ const Projects = () => {
           className={`p-4 cursor-pointer relative sm:flex items-center justify-between`}
           onMouseEnter={() => handleImageHover(image)}>
           {!isDesktop && (
-            <Image
-              src={image?.src}
-              width={300}
-              height={400}
-              className="sm:w-32 sm:h-20 w-full h-52 object-cover rounded-md"
-              alt="mobileImg"
-            />
+             <Image
+             src={image.src}
+             width={300}
+             height={400}
+             className="sm:w-32 sm:h-20 w-full h-52 object-cover rounded-md"
+             alt={image.name}
+             loading="lazy"
+             placeholder="blur"
+             blurDataURL={image.src}
+           />
           )}
           <h2
             className={`font-[exo] dark:text-gray-300 uppercase md:text-4xl sm:text-2xl text-xl font-bold sm:py-6 py-2 leading-[100%] relative ${
