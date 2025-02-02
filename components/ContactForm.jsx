@@ -5,7 +5,8 @@ import emailjs from 'emailjs-com'
 import {Festive} from "next/font/google"
 import Link from 'next/link';
 import Button from './Button';
-import { EqualApproximatelyIcon, MapPinHouse, Phone, Send } from 'lucide-react';
+
+import Footer from './Footer';
 export default function ContactForm() {
   const formRef = useRef();
   const [done, setDone] = useState(false);
@@ -118,30 +119,7 @@ export default function ContactForm() {
       </form>}
       </div>
     </div>
-     <div className="sticky z-0 bottom-0 left-0 w-full h-80  bg-white flex justify-center items-center">
-     <div className="relative overflow-hidden w-full h-full flex justify-end md:px-12 px-4 text-right items-start py-12 text-primaryRed">
-       <div className="flex flex-row space-x-12 sm:pace-x-16  md:space-x-24 text-sm sm:text-lg md:text-xl ">
-         <ul className='flex flex-col space-y-2'>
-          <li className=""><span className='flex gap-2'> <MapPinHouse/>Dhaka, Bangladesh</span></li>
-           <li className=""><span className='flex gap-2'> <Phone/> +880 1521331371</span></li>
-           <li className=""><span className='flex gap-2 items-center'> <Send/> yousuf.mohammad8783@gmail.com</span></li>
-           
-          
-         </ul>
-         <ul className='flex flex-col space-y-2'>
-           <li className="hover:underline cursor-pointer"><Link href="https://github.com/yousufmohammad" target="_blank" rel="noopener noreferrer">Github</Link></li>
-           <li className="hover:underline cursor-pointer"><Link href="https://github.com/yousufmohammad" target="_blank" rel="noopener noreferrer">Linked In</Link></li>
-           <li className="hover:underline cursor-pointer"><Link href="https://github.com/yousufmohammad" target="_blank" rel="noopener noreferrer">Facebook</Link></li>
-         
-         </ul>
-       </div>
-     
-       <h2 className="absolute bottom-20 left-10  translate-y-1/3 text-3xl  md:text-8xl font-bold text-slate-950 font-[rockybilly]">
-         Yousuf Mohammad
-       </h2>
-      
-     </div>
-   </div>
+        <Footer/>
      
    </div>
   )

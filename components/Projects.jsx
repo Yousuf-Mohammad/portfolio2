@@ -2,6 +2,7 @@
 import { useMediaQuery } from '../hooks/use-media-query';
 import { MoveUpRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import data from "../public/projects/data.json"
 const Projects = () => {
@@ -74,8 +75,10 @@ const Projects = () => {
           className={`p-4 cursor-pointer relative sm:flex items-center justify-between`}
           onMouseEnter={() => handleImageHover(image)}>
           {!isDesktop && (
-            <img
+            <Image
               src={image?.src}
+              width={300}
+              height={400}
               className="sm:w-32 sm:h-20 w-full h-52 object-cover rounded-md"
               alt="mobileImg"
             />
