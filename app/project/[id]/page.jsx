@@ -22,9 +22,9 @@ const projectPage = () => {
                 <Image src={project.src} width="1000" height="1000" alt='me' className=' h-full object-cover object-top rounded-2xl'/>
             </div>
          
-                <BentoCard className="md:col-span-2 md:row-span-2 col-span-1 row-span-1 bg-slate-900 mt-5 md:mt-0">
+                <BentoCard className="md:col-span-2 md:row-span-2 col-span-1 row-span-1 bg-slate-900 mt-5 md:mt-0 ">
                   
-                    <h1 className='md:text-4xl text-2xl font-black font-[exo] text-center underline underline-offset-8 mb-5 flex items-center justify-center gap-4 '><FileJson2 className='md:h-10 md:w-10' h-4 w-4/> Tech Stack</h1>
+                    <h1 className='md:text-3xl text-2xl font-black font-[exo] text-center  mb-3 flex items-center justify-center gap-4 '><FileJson2 className='md:h-10 md:w-10 h-4 w-4'/> Tech Stack</h1>
                     
                     {/* <p className='text-center text-2xl font-[montserrat] font-extrabold'>{project.stack}</p> */}
                     
@@ -36,7 +36,7 @@ const projectPage = () => {
                     </p>
                     
                     {project.github && <p className='text-center'>
-                    <Button linkString={project.github} target="_blank" ButttonName={<span className='flex items-center justify-center gap-2 text-gray-700 font-bold font-[exo]'> <Github className='w-7 h-7'/>Github</span>}
+                    <Button linkString={project.github} target="_blank" ButttonName={<span className='flex items-center justify-center gap-2 text-gray-700 py-2 font-bold font-[exo]'> <Github className='w-5 h-5'/>Repository</span>}
                     classNames={""}/>
                     </p>}
                     
