@@ -63,7 +63,7 @@ const Projects = () => {
     }, 300);
   }, []);
   return (
-    <div id='projects' className='sticky top-0 flex flex-col justify-center items-center bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] md:min-h-screen rounded-2xl p-24  h-full'>
+    <div id='projects' className='md:sticky md:top-0  relative flex flex-col justify-center items-center bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] md:min-h-screen rounded-2xl p-24  h-full'>
         <h1 className='md:text-6xl text-4xl md:mb-10 font-bold font-[exo] text-gray-700 text-center underline underline-offset-4'>Some Of My Projects</h1>
         
     <div

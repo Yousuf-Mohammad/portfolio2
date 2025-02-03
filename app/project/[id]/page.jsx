@@ -28,7 +28,7 @@ const ProjectPage = () => {
   }
 
   return (
-    <div className="absolute inset-0 -z-10 flex flex-col items-start px-5  bg-gradient-to-b from-black to-indigo-900 h-screen">
+    <div className="md:absolute relative inset-0 -z-10 flex flex-col h-full items-start px-5  bg-gradient-to-b from-black to-indigo-900 md:h-screen">
       {/* Back Button */}
       <Button classNames="mt-5 p-4" linkString="/" target="_self" ButttonName={<ArrowLeft />} />
 
@@ -53,7 +53,7 @@ const ProjectPage = () => {
           <h1 className="md:text-3xl text-2xl font-black text-center mb-3 flex items-center justify-center gap-4">
             <FileJson2 className="md:h-10 md:w-10 h-4 w-4" /> Tech Stack
           </h1>
-          <div className="flex justify-center items-center gap-4 mb-2">
+          <div className=" grid grid-cols-5 md:flex md:justify-center md:items-center md:gap-4 gap-2 mb-2">
             {project.stack?.map((tech, index) => (
               <Image
                 key={index}
@@ -61,7 +61,7 @@ const ProjectPage = () => {
                 width={64}
                 height={64}
                 alt="Tech"
-                className="md:h-16 h-12 w-auto bg-white rounded-lg p-2 shadow-xl shadow-gray-700"
+                className="md:h-16 h-12 w-12 md:w-auto bg-white rounded-lg p-2 shadow-xl shadow-gray-700"
                 loading="lazy"
               />
             ))}

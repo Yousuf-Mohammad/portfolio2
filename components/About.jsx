@@ -54,9 +54,9 @@ const About = () => {
 
   return (
     <motion.section
-      className="overflow-hidden md:h-screen w-screen bg-slate-900 bg-[radial-gradient(#ffffff_1px,#00091d_1px)] bg-[size:20px_20px] sticky top-0 rounded-2xl"
+      className="md:overflow-hidden overflow-y-scroll md:h-screen h-full w-screen bg-slate-900 bg-[radial-gradient(#ffffff_1px,#00091d_1px)] bg-[size:20px_20px] md:sticky relative md:top-0 rounded-2xl"
     >
-      <div className="grid md:h-screen h-full md:grid-cols-10 md:grid-rows-6 gap-5 container mx-auto md:p-24 p-2 grid-cols-1 grid-rows-24">
+      <div className="grid md:h-screen md:grid-cols-10 md:grid-rows-6 gap-5 container mx-auto md:p-24 p-2 grid-cols-1 grid-rows-24  ">
         
         {/* Profile Image */}
         <div className="md:col-span-3 md:row-span-3 flex flex-col justify-center items-center">
