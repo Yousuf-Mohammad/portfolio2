@@ -4,7 +4,7 @@
       "src": "/projects/limit-design.png",
       "name": "Limit Design ltd",
       "stack": [
-        "/techStack/reactJS.png",
+        "/techStack/react.png",
         "/techStack/Bootstrap.png",
         "/techStack/css.png",
         "/techStack/firebase.png",
@@ -20,7 +20,7 @@
       "src": "/projects/zentry.jpeg",
       "name": "Zentry",
       "stack": [
-        "/techStack/reactJS.png",
+        "/techStack/react.png",
         "/techStack/GSAP.png",
         "/techStack/css.png",
         "/techStack/Tailwind.png",
@@ -37,7 +37,7 @@
       "name": "Iphone-threeJS",
      
       "stack": [
-        "/techStack/reactJS.png",
+        "/techStack/react.png",
         "/techStack/three-js-seeklogo.png",
         "/techStack/GSAP.png",
         "/techStack/css.png",
@@ -55,7 +55,7 @@
       "src": "/projects/poruaAI.jpeg",
       "name": "Porua AI",
       "stack": [
-        "/techStack/nextJs.png",
+        "/techStack/next.png",
         "/techStack/Tailwind.png",
         "/techStack/Clerk_idOESnvCPd_0.png",
         "/techStack/LangChain_id12EQi2QW_0.png",
@@ -74,7 +74,7 @@
       "name": "Musafirs Den",
       "stack": "ReactJS, NodeJS, ExpressJS, Mongoose, MongoDB, MulterJS, Bcrypt, JWT",
       "stack": [
-        "/techStack/reactJS.png",
+        "/techStack/react.png",
         "/techStack/Bootstrap.png",
         "/techStack/css.png",
         "/techStack/nodeJS.png",
@@ -94,7 +94,7 @@
       "name": "Bangkok Hospital",
       "stack": "NextJs, TailwindCSS, Redux, Laravel, MySQL,InertiaJS",
       "stack": [
-        "/techStack/nextJs.png",
+        "/techStack/next.png",
         "/techStack/Tailwind.png",
         "/techStack/Redux.png",
         "/techStack/Laravel.png",

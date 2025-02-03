@@ -6,7 +6,7 @@ import BentoCard from "./BentoCard";
 
 const techStack = [
   "html", "css", "Scss", "Bootstrap", "Tailwind", "GSAP", "frameMotion",
-  "shadcn-ui-seeklogo", "JS", "reactJs", "nextJS", "Redux", "nodeJS",
+  "shadcn-ui-seeklogo", "JS", "react", "next", "Redux", "nodeJS",
   "Express", "Mongo", "MYSQL", "firebase", "PHP", "CSharp", "git", "github"
 ];
 
