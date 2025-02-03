@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Exo, Montserrat} from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -9,6 +10,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const myFont = localFont({
+  src: '../public/Rockybilly.ttf', // Adjust the path if needed
+  
+  variable: '--font-myfont' // Optional for CSS variables
 });
 
 
@@ -29,6 +36,7 @@ const montserrat = Montserrat({
 
 
 
+
 export const metadata = {
   title: "Yousuf Mohammad",
   description: "Yousuf Mohammad's personal website",
@@ -38,7 +46,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}   antialiased overflow-x-hidden overflow-y-scroll`}
+        className={`${geistSans.variable} ${geistMono.variable} ${exo.variable} ${montserrat.variable} ${myFont.variable}  antialiased overflow-x-hidden overflow-y-scroll`}
       >
         {children}
       </body>
