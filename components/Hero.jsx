@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 import { stagger, useAnimate } from "motion/react"
 import { motion, useTransform } from "framer-motion"
-import Image from "next/image"
+
 import Typewriter from "./fancy/typewriter"
 import Floating, { FloatingElement } from "./fancy/parallax-floating"
 import Button from "./Button"
@@ -44,22 +44,22 @@ const Hero = ({ scrollYProgress }) => {
         />
 
         <Button
-          linkString="/resumeYousufMohammad.pdf"
+          linkString="/resumeYousufMohammadBRACU.pdf"
           target="_blank"
           ButttonName={<span className="flex items-center justify-center font-bold font-[exo]">Resume</span>}
           classNames="text-xl font-bold z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-3 w-40 cursor-pointer"
         />
       </motion.div>
 
-      <Floating sensitivity={-1} className="hidden md:block absolute h-full w-full">
+      <Floating sensitivity={-1} className="hidden md:hidden lg:block absolute h-full w-full">
         {[
           { src: "/HeroSection/travel.jpeg", width: 192, height: 96, depth: 0.5, pos: "top-[10%] left-[12%]" },
           { src: "/HeroSection/amraNagorik.jpeg", width: 192, height: 208, depth: 1, pos: "top-[4%] left-[32%]" },
           { src: "/HeroSection/limit.png", width: 240, height: 208, depth: 2, pos: "top-[10%] left-[58%]" },
           { src: "/HeroSection/Tazkiah.jpeg", width: 192, height: 128, depth: 1, pos: "top-[15%] left-[75%]" },
           { src: "/HeroSection/IPhone.jpeg", width: 208, height: 256, depth: 1, pos: "top-[60%] left-[20%]" },
-          { src: "/HeroSection/premier.jpeg", width: 144, height: 192, depth: 2, pos: "top-[33%] left-[17%]" },
-          { src: "/HeroSection/regokus.jpeg", width: 240, height: 360, depth: 4, pos: "top-[45%] right-[-9%]" },
+          { src: "/HeroSection/premier.jpeg", width: 144, height: 192, depth: 2, pos: "top-[33%] left-[10%]" },
+          { src: "/HeroSection/regokus.jpeg", width: 240, height: 360, depth: 4, pos: "top-[45%] right-[1%]" },
           { src: "/HeroSection/travel.jpeg", width: 288, height: 384, depth: 4, pos: "top-[80%] left-[48%]" },
           { src: "/HeroSection/zentry.jpeg", width: 208, height: 288, depth: 1, pos: "top-[65%] left-[64%]" },
         ].map(({ src, width, height, depth, pos }, index) => (

@@ -46,7 +46,7 @@ const About = () => {
         src={`/techStack/${tech}.png`} 
         width={64} height={64} 
         alt={tech} 
-        className="h-10 md:h-16 w-auto bg-white shadow-lg rounded-lg p-2" 
+        className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto bg-white shadow-lg rounded-lg p-1 md:p-2" 
         loading="lazy"
       />
     ))
@@ -54,52 +54,83 @@ const About = () => {
 
   return (
     <motion.section
-      className="md:overflow-hidden overflow-y-scroll md:h-screen h-full w-screen bg-slate-900 bg-[radial-gradient(#ffffff_1px,#00091d_1px)] bg-[size:20px_20px] md:sticky relative md:top-0 rounded-2xl"
+      className="w-full min-h-screen bg-slate-900 bg-[radial-gradient(#ffffff_1px,#00091d_1px)] bg-[size:20px_20px] lg:rounded-3xl px-4 sm:px-6 lg:px-8 py-8  md:sticky relative md:top-0 "
     >
-      <div className="grid md:h-screen md:grid-cols-10 md:grid-rows-6 gap-5 container mx-auto md:p-24 p-2 grid-cols-1 grid-rows-24  ">
+      <div className="grid grid-cols-1 lg:grid-cols-10 lg:grid-rows-6 gap-4 max-w-7xl mx-auto">
         
         {/* Profile Image */}
-        <div className="md:col-span-3 md:row-span-3 flex flex-col justify-center items-center">
-          <div className="rounded-full md:w-80 md:h-80 h-56 w-56 bg-yellow-300 border-white border-4 overflow-hidden">
-            <Image src="/Me.png" width={320} height={320} alt="Me" className="rounded-full" priority />
+        <div className="lg:col-span-3 lg:row-span-3 row-span-1 flex justify-center items-center">
+          <div className="rounded-full w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-yellow-300 border-2 sm:border-4 border-white overflow-hidden">
+            <Image 
+              src="/Me.png" 
+              width={320} 
+              height={320} 
+              alt="Me" 
+              className="w-full h-full object-cover"
+              priority 
+            />
           </div>
         </div>
 
         {/* About Me */}
-        <BentoCard className="md:col-span-7 md:row-span-3 flex flex-col justify-center items-center bg-gray-800 row-span-3">
-          <p className="md:text-2xl text-md font-semibold">
-          Hello, I'm Yousuf, a dedicated and passionate web developer committed to creating impactful and user-centric websites. I specialize in designing and developing websites that are not only visually appealing but also highly functional, ensuring an optimal user experience.
-
+        <BentoCard className="lg:col-span-7 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed text-stroke">
+            Hello, I'm Yousuf, a dedicated and passionate web developer committed to creating impactful and user-centric websites. 
+            I specialize in designing and developing websites that are not only visually appealing but also highly functional, 
+            ensuring an optimal user experience.
           </p>
-          <p className="md:text-2xl text-md font-semibold hidden md:block mt-4">
-          With a strong enthusiasm for web development, I continuously seek opportunities to expand my skill set and stay updated with the latest industry trends. My goal is to craft innovative digital solutions that effectively meet user needs and business objectives.
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed mt-2 md:mt-4 text-stroke">
+            With a strong enthusiasm for web development, I continuously seek opportunities to expand my skill set and stay updated 
+            with the latest industry trends. My goal is to craft innovative digital solutions that effectively meet user needs and 
+            business objectives.
           </p>
         </BentoCard>
 
         {/* Tech Stack */}
-        <BentoCard className="md:col-span-4 md:row-span-3 flex flex-col justify-center items-center bg-gray-800">
-          <h1 className="md:text-3xl text-2xl font-bold text-center underline underline-offset-4 mb-5">I have worked using</h1>
-          <div className="grid grid-cols-7 gap-4 ">{techStackImages}</div>
+        <BentoCard className="lg:col-span-4 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center uppercase mb-4 text-stroke ">I have worked using</h1>
+          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-2 md:gap-3">
+            {techStackImages}
+          </div>
         </BentoCard>
 
         {/* Experience */}
-        <BentoCard className="md:col-span-3 md:row-span-3 flex flex-col justify-center items-start bg-gray-800">
-          <h1 className="text-2xl md:text-4xl font-bold underline underline-offset-2 mb-5 text-center">Experience</h1>
+        <BentoCard className="lg:col-span-3 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold uppercase  text-center mb-4 text-stroke">Experience</h1>
           {experiences.map((exp) => (
-            <div key={exp.company} className="flex justify-start items-start gap-4 mb-5">
-              <Image src={exp.logo} width={64} height={64} alt={exp.company} className="h-16 w-16 bg-white shadow-lg rounded-lg p-2" loading="lazy" />
-              <p className="text-xl font-bold">{exp.role}<br />{exp.company}<br /><span>({exp.duration})</span></p>
+            <div key={exp.company} className="flex items-start gap-3 mb-4">
+              <Image 
+                src={exp.logo} 
+                width={48} 
+                height={48} 
+                alt={exp.company} 
+                className="h-12 w-12 sm:h-14 sm:w-14 bg-white shadow-lg rounded-lg p-1"
+              />
+              <div>
+                <p className="text-sm sm:text-base md:text-lg font-semibold">{exp.role}</p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-300">{exp.company}</p>
+                <p className="text-xs sm:text-sm text-gray-400">({exp.duration})</p>
+              </div>
             </div>
           ))}
         </BentoCard>
 
         {/* Education */}
-        <BentoCard className="md:col-span-3 md:row-span-3 flex flex-col justify-center items-end bg-gray-800">
-          <h1 className="text-2xl md:text-4xl font-bold underline underline-offset-2 mb-5 text-center">Education</h1>
+        <BentoCard className="lg:col-span-3 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold uppercase text-center mb-4 text-stroke">Education</h1>
           {education.map((edu) => (
-            <div key={edu.school} className="flex justify-start items-start gap-4 mb-5">
-              <Image src={edu.logo} width={64} height={64} alt={edu.school} className="h-16 w-16 bg-white shadow-lg rounded-lg p-2" loading="lazy" />
-              <p className="text-xl font-bold text-left">{edu.degree}<br />{edu.school}</p>
+            <div key={edu.school} className="flex items-start gap-3 mb-4">
+              <Image 
+                src={edu.logo} 
+                width={48} 
+                height={48} 
+                alt={edu.school} 
+                className="h-12 w-12 sm:h-14 sm:w-14 bg-white shadow-lg rounded-lg p-1"
+              />
+              <div>
+                <p className="text-sm sm:text-base md:text-lg font-semibold">{edu.degree}</p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-300">{edu.school}</p>
+              </div>
             </div>
           ))}
         </BentoCard>
@@ -107,6 +138,7 @@ const About = () => {
       </div>
     </motion.section>
   );
+  
 };
 
 export default About;

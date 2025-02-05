@@ -8,7 +8,7 @@ import Link from "next/link";
 import data from "@/public/projects/data.json";
 import { ArrowLeft, ExternalLink, FileJson2, Github } from "lucide-react";
 
-// Lazy Load Components for Faster Initial Load
+// Lazy Load Components for Faster Performance
 const BentoCard = dynamic(() => import("@/components/BentoCard"), { ssr: false });
 const Button = dynamic(() => import("@/components/Button"), { ssr: false });
 
@@ -28,32 +28,34 @@ const ProjectPage = () => {
   }
 
   return (
-    <div className="md:absolute relative inset-0 -z-10 flex flex-col h-full items-start px-5  bg-gradient-to-b from-black to-indigo-900 md:h-screen">
+    <div className="relative flex flex-col items-start min-h-screen px-5 py-8 bg-gradient-to-b from-black to-indigo-900">
+      
       {/* Back Button */}
-      <Button classNames="mt-5 p-4" linkString="/" target="_self" ButttonName={<ArrowLeft />} />
+      <Button classNames="mb-5 p-4" linkString="/" target="_self" ButttonName={<ArrowLeft />} />
 
-      {/* Project Grid */}
-      <div className="grid md:grid-cols-7 md:grid-rows-6 grid-cols-1 grid-rows-4 gap-4 mx-auto md:p-28 md:h-[90vh] w-full">
-        {/* Project Image (Visible on Desktop) */}
+      {/* Bento Grid Layout */}
+      <div className="grid w-full max-w-6xl mx-auto gap-6 grid-cols-1 sm:grid-cols-4 sm:grid-rows-6">
+        
+        {/* Project Image (Large Image in a Bento Box) */}
         {project.src && (
-          <div className="col-span-2 row-span-3 md:row-span-5 flex justify-center items-center rounded-2xl hidden md:block">
+          <BentoCard className="sm:col-span-2 sm:row-span-4 flex justify-center items-center p-0 overflow-hidden">
             <Image
               src={project.src}
               width={1000}
-              height={1000}
+              height={600}
               alt={project.name}
-              className="h-full object-cover object-top rounded-2xl"
+              className="w-full h-full object-cover rounded-2xl"
               priority
             />
-          </div>
+          </BentoCard>
         )}
 
         {/* Tech Stack Card */}
-        <BentoCard className="md:col-span-5 md:row-span-3 col-span-1 row-span-1 bg-slate-900 mt-5 md:mt-0 flex flex-col items-center justify-center">
-          <h1 className="md:text-3xl text-2xl font-black text-center mb-3 flex items-center justify-center gap-4">
-            <FileJson2 className="md:h-10 md:w-10 h-4 w-4" /> Tech Stack
+        <BentoCard className="sm:col-span-2 sm:row-span-2 flex flex-col items-center justify-center bg-slate-900">
+          <h1 className="text-lg sm:text-2xl font-black justify-center uppercase mb-3 flex items-center gap-1">
+            <FileJson2 className="w-6 h-6 sm:w-8 sm:h-8 uppercase" /> Tech Stack
           </h1>
-          <div className=" grid grid-cols-5 md:flex md:justify-center md:items-center md:gap-4 gap-2 mb-2">
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
             {project.stack?.map((tech, index) => (
               <Image
                 key={index}
@@ -61,7 +63,7 @@ const ProjectPage = () => {
                 width={64}
                 height={64}
                 alt="Tech"
-                className="md:h-16 h-12 w-12 md:w-auto bg-white rounded-lg p-2 shadow-xl shadow-gray-700"
+                className="h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-lg p-2 shadow-xl shadow-gray-700"
                 loading="lazy"
               />
             ))}
@@ -71,29 +73,29 @@ const ProjectPage = () => {
               linkString={project.github}
               target="_blank"
               ButttonName={
-                <span className="flex items-center gap-2 text-gray-700 py-2 font-bold">
+                <span className="flex items-center gap-2 text-gray-800 py-2 font-bold ">
                   <Github className="w-5 h-5" />
                   Repository
                 </span>
               }
-              classNames="w-full mx-auto"
+              classNames="w-full mt-4"
             />
           )}
         </BentoCard>
 
-        {/* Description Card */}
-        <BentoCard className="md:col-span-5 md:row-span-4 col-span-1 row-span-2 bg-slate-900 flex flex-col items-center">
-          <h1 className="md:text-4xl text-2xl font-black text-center underline underline-offset-8 mb-5">
+        {/* Project Description */}
+        <BentoCard className="sm:col-span-2 sm:row-span-3 flex flex-col items-center justify-center bg-slate-900">
+          <h1 className="text-lg sm:text-2xl font-black text-center uppercase mb-4">
             Description
           </h1>
-          <p className="text-justify md:text-2xl text-md font-bold">{project.description}</p>
+          <p className="text-justify text-sm sm:text-lg font-bold .text-stroke">{project.description}</p>
         </BentoCard>
 
-        {/* Project Link Card */}
-        <BentoCard className="md:col-span-2 md:row-span-1 col-span-1 row-span-1 flex justify-center items-center bg-slate-900">
+        {/* Project Link */}
+        <BentoCard className="sm:col-span-2 sm:row-span-1 flex justify-center items-center bg-slate-900">
           <Link href={project.link} target="_blank" rel="noopener noreferrer">
-            <h1 className="md:text-4xl text-2xl font-bold flex justify-center items-center gap-2">
-              {project.name} <ExternalLink className="md:w-10 md:h-10 h-5 w-5" />
+            <h1 className="text-lg sm:text-2xl font-bold flex items-center gap-2">
+              {project.name} <ExternalLink className="w-6 h-6" />
             </h1>
           </Link>
         </BentoCard>

@@ -25,7 +25,7 @@ const AnimatedGradient = ({
     blur === "light"
       ? "blur-2xl"
       : blur === "medium"
-        ? "blur-3xl"
+        ? "blur-[50px]"
         : "blur-[100px]"
 
   return (
@@ -50,10 +50,10 @@ const AnimatedGradient = ({
                 "--ty-4": Math.random() - 0.5
               }
             }
-            width={circleSize * randomInt(0.5, 0.8)}
-            height={circleSize * randomInt(0.5, 0.7)}
+            width={circleSize * randomInt(0.2, 0.7)}
+            height={circleSize * randomInt(0.3, 0.7)}
             viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="50" fill={color} />
+            <circle cx="50" cy="50" r="40" fill={color} />
           </svg>
         ))}
       </div>

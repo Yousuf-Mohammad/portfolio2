@@ -21,7 +21,7 @@ const Footer = React.memo(() => {
         </div>
 
         {/* Name Branding */}
-        <h2 className="absolute bottom-20 left-10 text-3xl md:text-8xl font-bold text-slate-950 rockybilly">
+        <h2 className="absolute bottom-10 left-20 text-4xl md:text-8xl font-bold text-slate-950 rockybilly">
           Yousuf Mohammad
         </h2>
       </div>
