@@ -22,8 +22,8 @@ export default function ContactForm() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Background & Container */}
-      <div className="isolate flex items-center justify-center px-4 py-16 md:px-6 lg:py-24 bg-gradient-to-b from-black to-indigo-900 relative z-10 rounded-3xl">
-        <div className="bg-slate-800 w-full max-w-lg lg:max-w-2xl p-6 md:p-12 rounded-2xl shadow-lg shadow-gray-600">
+      <div className="isolate flex items-center justify-center px-4 py-16 min-h-screen md:px-6 lg:py-24 bg-gradient-to-b from-black to-indigo-900 relative z-10 rounded-3xl">
+        <div className="bg-slate-800 w-full max-w-lg lg:max-w-2xl p-6 md:p-12 rounded-2xl shadow-lg shadow-gray-600 ">
           
           {/* Success Message */}
           {done ? (
@@ -33,7 +33,8 @@ export default function ContactForm() {
               
               {/* Heading */}
               <div className="text-center mb-6">
-                <h2 className="text-3xl md:text-4xl font-semibold text-gray-200 underline underline-offset-4">Contact Me</h2>
+                <small className="text-gray-200 text-md font-bold">I&apos;d love to hear from you</small>
+                <h2 className="text-3xl md:text-5xl font-black text-gray-200 uppercase">Contact Me</h2>
               </div>
 
               {/* Input Fields */}
@@ -45,6 +46,7 @@ export default function ContactForm() {
                     id="first-name"
                     name="first-name"
                     type="text"
+                    required
                     autoComplete="given-name"
                     className="mt-2 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm focus:outline-indigo-600"
                   />
@@ -57,6 +59,7 @@ export default function ContactForm() {
                     id="last-name"
                     name="last-name"
                     type="text"
+                    required
                     autoComplete="family-name"
                     className="mt-2 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm focus:outline-indigo-600"
                   />
@@ -69,6 +72,7 @@ export default function ContactForm() {
                     id="email"
                     name="email"
                     type="email"
+                    required
                     autoComplete="email"
                     className="mt-2 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm focus:outline-indigo-600"
                   />
@@ -81,6 +85,7 @@ export default function ContactForm() {
                     id="phone-number"
                     name="phone-number"
                     type="text"
+                    required
                     placeholder="123-456-7890"
                     className="mt-2 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm focus:outline-indigo-600"
                   />
@@ -92,6 +97,7 @@ export default function ContactForm() {
                   <textarea
                     id="message"
                     name="message"
+                    required
                     rows={4}
                     className="mt-2 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm focus:outline-indigo-600"
                   />

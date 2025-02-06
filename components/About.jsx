@@ -54,7 +54,7 @@ const About = () => {
 
   return (
     <motion.section
-      className="w-full min-h-screen bg-slate-900 bg-[radial-gradient(#ffffff_1px,#00091d_1px)] bg-[size:20px_20px] lg:rounded-3xl px-4 sm:px-6 lg:px-8 py-8  md:sticky relative md:top-0 "
+      className="w-full min-h-screen bg-slate-900 bg-[radial-gradient(#ffffff_1px,#00091d_1px)] bg-[size:20px_20px] lg:rounded-3xl px-4 sm:px-6 lg:px-8 py-8  xl:sticky relative xl:top-0 "
     >
       <div className="grid grid-cols-1 lg:grid-cols-10 lg:grid-rows-6 gap-4 max-w-7xl mx-auto">
         

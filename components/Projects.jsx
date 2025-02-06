@@ -64,7 +64,7 @@ const Projects = () => {
   }, []);
   return (
     <div id='projects' className='md:sticky md:top-0  relative flex flex-col justify-center items-center bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] md:min-h-screen lg:rounded-2xl p-24  h-full'>
-        <h1 className='md:text-6xl text-4xl md:mb-10 font-bold font-[exo] text-gray-700 text-center underline underline-offset-4'>Some Of My Projects</h1>
+        <h1 className='md:text-5xl text-4xl xl:mb-5 font-black font-[exo] text-gray-700 text-center uppercase'>Some Of My Projects</h1>
         
     <div
       className=" w-full  dark:bg-gradient-to-b from-black from-10% to-gray-950 to-100%  rounded-md  "
@@ -72,7 +72,7 @@ const Projects = () => {
       {data.map((image) => (
         <Link href={`/project/${image.id}`}
           key={image.id}
-          className={`p-4 cursor-pointer relative sm:flex items-center justify-between`}
+          className={`px-4  py-2 cursor-pointer relative sm:flex items-center justify-between`}
           onMouseEnter={() => handleImageHover(image)}>
           {!isDesktop && (
              <Image
