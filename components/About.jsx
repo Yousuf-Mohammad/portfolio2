@@ -20,7 +20,7 @@ const experiences = [
   {
     company: "VAST",
     role: "Web Developer (Contractual)",
-    duration: "Oct 2023 - Sep 2024",
+    duration: "Nov 2023 - Sep 2024",
     logo: "/vast.jpg",
   }
 ];
