@@ -46,7 +46,7 @@ const About = () => {
         src={`/techStack/${tech}.png`} 
         width={64} height={64} 
         alt={tech} 
-        className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto bg-white shadow-lg rounded-lg p-1 md:p-2" 
+        className="h-12 w-12 sm:h-16 sm:w-16 lg:h-14 lg:w-14 xl:h-20 xl:w-16 lg:h-20  bg-white shadow-lg rounded-lg p-1 md:p-2" 
         loading="lazy"
       />
     ))
@@ -73,13 +73,13 @@ const About = () => {
         </div>
 
         {/* About Me */}
-        <BentoCard className="lg:col-span-7 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed text-stroke">
+        <BentoCard className="lg:col-span-7 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6 lg:justify-center ">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal leading-relaxed text-stroke">
             Hello, I'm Yousuf, a dedicated and passionate web developer committed to creating impactful and user-centric websites. 
             I specialize in designing and developing websites that are not only visually appealing but also highly functional, 
             ensuring an optimal user experience.
           </p>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed mt-2 md:mt-4 text-stroke">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal leading-relaxed mt-2 md:mt-4 text-stroke">
             With a strong enthusiasm for web development, I continuously seek opportunities to expand my skill set and stay updated 
             with the latest industry trends. My goal is to craft innovative digital solutions that effectively meet user needs and 
             business objectives.
@@ -87,9 +87,9 @@ const About = () => {
         </BentoCard>
 
         {/* Tech Stack */}
-        <BentoCard className="lg:col-span-4 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6">
+        <BentoCard className="lg:col-span-4 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-4">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center uppercase mb-4 text-stroke ">I have worked using</h1>
-          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-2 md:gap-3">
+          <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-5 xl:grid-cols-7 gap-2 md:gap-3">
             {techStackImages}
           </div>
         </BentoCard>
