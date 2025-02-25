@@ -92,13 +92,11 @@
       "id": 6,
       "src": "/projects/bangkok.jpeg",
       "name": "Bangkok Hospital",
-      "stack": "NextJs, TailwindCSS, Redux, Laravel, MySQL,InertiaJS",
+      "stack": "NextJs, TailwindCSS, Redux",
       "stack": [
         "/techStack/next.png",
         "/techStack/Tailwind.png",
-        "/techStack/Redux.png",
-        "/techStack/Laravel.png",
-        "/techStack/MySQL.png"
+        "/techStack/Redux.png"
 
       ],
       "description": "Developed a modern and responsive medical website using Next.js, Tailwind CSS, and Redux, providing detailed information about the hospital's services and enabling users to book appointments seamlessly. The platform is designed for an intuitive user experience, ensuring accessibility and efficiency for patients seeking medical consultations and various healthcare services. This project demonstrates expertise in front-end development, state management, and user-centric design.",
