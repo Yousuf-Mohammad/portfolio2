@@ -7,14 +7,20 @@ import BentoCard from "./BentoCard";
 const techStack = [
   "html", "css", "Scss", "Bootstrap", "Tailwind", "GSAP", "frameMotion",
   "shadcn-ui-seeklogo", "JS", "react", "next", "Redux", "nodeJS",
-  "Express", "Mongo", "MYSQL", "firebase", "PHP", "CSharp", "git", "github"
+  "Express", "Mongo", "MYSQL", "firebase", "PHP", "Laravel", "git", "github"
 ];
 
 const experiences = [
   {
+    company:"Nukta Solutions",
+    role:"Jr. Software Engineer",
+    duration:"Apr 2025 - Present",
+    logo:"/nukta.svg",
+  },
+  {
     company: "Avenir IT",
     role: "Jr. Frontend Developer",
-    duration: "Sep 2024 - Present",
+    duration: "Sep 2024 - Mar 2025",
     logo: "/aveenir.png",
   },
   {
@@ -41,14 +47,15 @@ const education = [
 const About = () => {
   const techStackImages = useMemo(() => (
     techStack.map((tech) => (
-      <Image 
-        key={tech} 
-        src={`/techStack/${tech}.png`} 
-        width={64} height={64} 
-        alt={tech} 
-        className="h-12 w-12 sm:h-16 sm:w-16 lg:h-14 lg:w-14 xl:h-20 xl:w-16 lg:h-20  bg-white shadow-lg rounded-lg p-1 md:p-2" 
-        loading="lazy"
-      />
+      <div className="bg-white shadow-lg rounded-lg p-1 md:p-1.5 h-12 w-12">
+        <Image 
+          src={`/techStack/${tech}.png`} 
+          width={40} 
+          height={40} 
+          alt={tech} 
+          className="w-full h-full object-contain"
+        />
+      </div>
     ))
   ), []);
 
@@ -87,7 +94,7 @@ const About = () => {
         </BentoCard>
 
         {/* Tech Stack */}
-        <BentoCard className="lg:col-span-4 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-4">
+        <BentoCard className="lg:col-span-4 lg:row-span-3 row-span-2 bg-gray-800 p-3 ">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center uppercase mb-4 text-stroke ">I have worked using</h1>
           <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-5 xl:grid-cols-7 gap-2 md:gap-3">
             {techStackImages}
@@ -95,21 +102,22 @@ const About = () => {
         </BentoCard>
 
         {/* Experience */}
-        <BentoCard className="lg:col-span-3 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6">
+        <BentoCard className="lg:col-span-3 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6 w-full">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold uppercase  text-center mb-4 text-stroke">Experience</h1>
           {experiences.map((exp) => (
-            <div key={exp.company} className="flex items-start gap-3 mb-4">
+            <div key={exp.company} className="flex items-start gap-3 mb-4 ">
+              <div className="h-12 w-12 sm:h-14 sm:w-14 bg-white shadow-lg rounded-lg p-1.5">
               <Image 
                 src={exp.logo} 
-                width={48} 
-                height={48} 
+                width={40} 
+                height={40} 
                 alt={exp.company} 
-                className="h-12 w-12 sm:h-14 sm:w-14 bg-white shadow-lg rounded-lg p-1"
+                className="h-full w-full object-contain"
               />
-              <div>
-                <p className="text-sm sm:text-base md:text-lg font-semibold">{exp.role}</p>
-                <p className="text-xs sm:text-sm md:text-base text-gray-300">{exp.company}</p>
-                <p className="text-xs sm:text-sm text-gray-400">({exp.duration})</p>
+              </div>
+              <div className="w-full">
+                <p className="w-full text-sm sm:text-base md:text-base font-semibold">{exp.role}</p>
+                <p className="w-full text-xs sm:text-sm md:text-sm text-gray-300">{exp.company}({exp.duration})</p>
               </div>
             </div>
           ))}

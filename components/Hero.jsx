@@ -44,7 +44,7 @@ const Hero = ({ scrollYProgress }) => {
         />
 
         <Button
-          linkString="/resumeYousufMohammadBRACU.pdf"
+          linkString="/Yousuf_Mohammad_Developer_Resume2025.pdf"
           target="_blank"
           ButttonName={<span className="flex items-center justify-center font-bold font-[exo]">Resume</span>}
           classNames="text-xl font-bold z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-3 w-40 cursor-pointer"
