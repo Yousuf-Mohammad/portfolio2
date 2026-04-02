@@ -101,7 +101,7 @@ const About = () => {
         {/* About Me */}
         <BentoCard className="lg:col-span-7 lg:row-span-3 row-span-2 bg-gray-800 p-4 md:p-6 lg:justify-center ">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal leading-relaxed text-stroke">
-            Hello, I'm Yousuf, a dedicated and passionate web developer
+            Hello, I&apos;m Yousuf, a dedicated and passionate web developer
             committed to creating impactful and user-centric websites. I
             specialize in designing and developing websites that are not only
             visually appealing but also highly functional, ensuring an optimal

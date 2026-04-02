@@ -33,6 +33,7 @@ const Footer = React.memo(() => {
     </footer>
   );
 });
+Footer.displayName = "Footer";
 
 // Reusable Contact Info Component
 const ContactInfo = ({ icon, text }) => (
