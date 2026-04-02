@@ -51,7 +51,7 @@ const Hero = ({ scrollYProgress }) => {
           />
 
           <Button
-            linkString="/Yousuf_Mohammad_Fullstack_Developer.pdf"
+            linkString="/Yousuf_Mohammad_FullStack_Developer.pdf"
             target="_blank"
             ButttonName={
               <span className="flex items-center justify-center font-bold font-[exo]">
