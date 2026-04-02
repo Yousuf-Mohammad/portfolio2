@@ -66,7 +66,9 @@ const About = () => {
   const techStackImages = useMemo(
     () =>
       techStack.map((tech) => (
-        <div className="bg-white shadow-lg rounded-lg p-1 md:p-1.5 h-12 w-12">
+        <div
+          className="bg-white shadow-lg rounded-lg p-1 md:p-1.5 h-12 w-12"
+          key={tech}>
           <Image
             src={`/techStack/${tech}.png`}
             width={40}
