@@ -1,34 +1,36 @@
 "use client";
 
-import { useEffect } from "react";
-import { stagger, useAnimate } from "motion/react";
-import { motion, useTransform } from "framer-motion";
+import { motion } from "motion/react";
+import Image from "next/image";
 
+import { useMediaQuery } from "../hooks/use-media-query";
 import Typewriter from "./fancy/typewriter";
 import Floating, { FloatingElement } from "./fancy/parallax-floating";
 import Button from "./Button";
 
-const Hero = ({ scrollYProgress }) => {
-  const [scope, animate] = useAnimate();
+const MotionImage = motion.create(Image);
 
-  // const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8])
-  // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
+const floatingImages = [
+  { src: "/HeroSection/travel.jpeg", width: 192, height: 96, depth: 0.5, pos: "top-[10%] left-[12%]" },
+  { src: "/HeroSection/amraNagorik.jpeg", width: 192, height: 208, depth: 1, pos: "top-[4%] left-[32%]" },
+  { src: "/HeroSection/limit.png", width: 240, height: 208, depth: 2, pos: "top-[10%] left-[58%]" },
+  { src: "/HeroSection/Tazkiah.jpeg", width: 192, height: 128, depth: 1, pos: "top-[15%] left-[75%]" },
+  { src: "/HeroSection/IPhone.jpeg", width: 208, height: 256, depth: 1, pos: "top-[60%] left-[20%]" },
+  { src: "/HeroSection/premier.jpeg", width: 144, height: 192, depth: 2, pos: "top-[33%] left-[10%]" },
+  { src: "/HeroSection/regokus.jpeg", width: 240, height: 360, depth: 4, pos: "top-[45%] right-[1%]" },
+  { src: "/HeroSection/travel.jpeg", width: 288, height: 384, depth: 4, pos: "top-[80%] left-[48%]" },
+  { src: "/HeroSection/zentry.jpeg", width: 208, height: 288, depth: 1, pos: "top-[65%] left-[64%]" },
+];
 
-  useEffect(() => {
-    animate(
-      "img",
-      { opacity: [0, 1] },
-      { duration: 0.5, delay: stagger(0.15) },
-    );
-  }, []);
+const Hero = () => {
+  // The floating layer is only visible on large screens. Mounting it
+  // conditionally avoids the per-frame rAF loop + global mouse/touch
+  // listeners on phones and tablets, where it would never be seen.
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
 
   return (
     <section className="sticky top-0">
-      <motion.section
-        className="flex w-full h-screen justify-center items-center overflow-hidden select-none [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] relative sm:w-full"
-        ref={scope}
-        // style={{ scale, rotate }}
-      >
+      <motion.section className="flex w-full h-screen justify-center items-center overflow-hidden select-none [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] relative sm:w-full">
         <motion.div
           className="z-50 text-center space-y-4 items-center flex flex-col mix-blend-difference"
           initial={{ opacity: 0, y: 10 }}
@@ -53,7 +55,7 @@ const Hero = ({ scrollYProgress }) => {
           <Button
             linkString="/Yousuf_Mohammad_FullStack_Developer.pdf"
             target="_blank"
-            ButttonName={
+            buttonName={
               <span className="flex items-center justify-center font-bold font-[exo]">
                 Resume
               </span>
@@ -62,87 +64,27 @@ const Hero = ({ scrollYProgress }) => {
           />
         </motion.div>
 
-        <Floating
-          sensitivity={-1}
-          className="hidden md:hidden lg:block absolute h-full w-full">
-          {[
-            {
-              src: "/HeroSection/travel.jpeg",
-              width: 192,
-              height: 96,
-              depth: 0.5,
-              pos: "top-[10%] left-[12%]",
-            },
-            {
-              src: "/HeroSection/amraNagorik.jpeg",
-              width: 192,
-              height: 208,
-              depth: 1,
-              pos: "top-[4%] left-[32%]",
-            },
-            {
-              src: "/HeroSection/limit.png",
-              width: 240,
-              height: 208,
-              depth: 2,
-              pos: "top-[10%] left-[58%]",
-            },
-            {
-              src: "/HeroSection/Tazkiah.jpeg",
-              width: 192,
-              height: 128,
-              depth: 1,
-              pos: "top-[15%] left-[75%]",
-            },
-            {
-              src: "/HeroSection/IPhone.jpeg",
-              width: 208,
-              height: 256,
-              depth: 1,
-              pos: "top-[60%] left-[20%]",
-            },
-            {
-              src: "/HeroSection/premier.jpeg",
-              width: 144,
-              height: 192,
-              depth: 2,
-              pos: "top-[33%] left-[10%]",
-            },
-            {
-              src: "/HeroSection/regokus.jpeg",
-              width: 240,
-              height: 360,
-              depth: 4,
-              pos: "top-[45%] right-[1%]",
-            },
-            {
-              src: "/HeroSection/travel.jpeg",
-              width: 288,
-              height: 384,
-              depth: 4,
-              pos: "top-[80%] left-[48%]",
-            },
-            {
-              src: "/HeroSection/zentry.jpeg",
-              width: 208,
-              height: 288,
-              depth: 1,
-              pos: "top-[65%] left-[64%]",
-            },
-          ].map(({ src, width, height, depth, pos }, index) => (
-            <FloatingElement key={index} depth={depth} className={pos}>
-              <motion.img
-                initial={{ opacity: 0 }}
-                src={src}
-                alt="Floating image"
-                width={width}
-                height={height}
-                className="object-cover hover:scale-105 duration-200 cursor-pointer transition-transform"
-                priority={index < 2}
-              />
-            </FloatingElement>
-          ))}
-        </Floating>
+        {isDesktop && (
+          <Floating
+            sensitivity={-1}
+            className="absolute h-full w-full">
+            {floatingImages.map(({ src, width, height, depth, pos }, index) => (
+              <FloatingElement key={index} depth={depth} className={pos}>
+                <MotionImage
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.15 }}
+                  src={src}
+                  alt="Project preview"
+                  width={width}
+                  height={height}
+                  className="object-cover hover:scale-105 duration-200 cursor-pointer transition-transform"
+                  priority={index < 2}
+                />
+              </FloatingElement>
+            ))}
+          </Floating>
+        )}
       </motion.section>
     </section>
   );

@@ -1,16 +1,13 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import dynamic from "next/dynamic";
 import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import data from "@/public/projects/data.json";
 import { ArrowLeft, ExternalLink, FileJson2, Github } from "lucide-react";
-
-// Lazy Load Components for Faster Performance
-const BentoCard = dynamic(() => import("@/components/BentoCard"), { ssr: false });
-const Button = dynamic(() => import("@/components/Button"), { ssr: false });
+import BentoCard from "@/components/BentoCard";
+import Button from "@/components/Button";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -31,7 +28,7 @@ const ProjectPage = () => {
     <div className="relative flex flex-col items-start min-h-screen px-5 py-8 bg-gradient-to-b from-black to-indigo-900">
       
       {/* Back Button */}
-      <Button classNames="mb-5 p-4" linkString="/" target="_self" ButttonName={<ArrowLeft />} />
+      <Button classNames="mb-5 p-4" linkString="/" target="_self" buttonName={<ArrowLeft />} />
 
       {/* Bento Grid Layout */}
       <div className="grid w-full max-w-6xl mx-auto gap-6 grid-cols-1 sm:grid-cols-4 sm:grid-rows-6">
@@ -72,7 +69,7 @@ const ProjectPage = () => {
             <Button
               linkString={project.github}
               target="_blank"
-              ButttonName={
+              buttonName={
                 <span className="flex items-center gap-2 text-gray-800 py-2 font-bold ">
                   <Github className="w-5 h-5" />
                   Repository

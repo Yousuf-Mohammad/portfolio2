@@ -19,11 +19,11 @@ const BentoTilt =({children , className=" "})=>{
         rotateY(${tiltY}deg) scale3d(.98, .98, .98)`;
         setTransformStyle(newTransformation)
     }
-    const handleMosueLeave=()=>{
+    const handleMouseLeave=()=>{
         setTransformStyle('')
     }
     return (
-        <div className={className} ref={itemRef} onMouseMove={handleMouseMove} onMouseLeave={handleMosueLeave} style={{transform:transformStyle}}>
+        <div className={className} ref={itemRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{transform:transformStyle}}>
             {children}
         </div>
     )

@@ -113,7 +113,7 @@ const Projects = () => {
       {isDesktop && activeImage && (
         <img
           src={activeImage.src}
-          alt={activeImage.alt}
+          alt={activeImage.name}
           className={`fixed dark:bg-gray-950 bg-white object-cover pointer-events-none z-10 w-[300px] h-[400px] rounded-lg`}
           style={{
             left: `${cursorPosition.x}px`,
