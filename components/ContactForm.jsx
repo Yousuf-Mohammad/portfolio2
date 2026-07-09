@@ -9,7 +9,9 @@ const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const inputClass =
-  "mt-2 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm focus:outline-indigo-600";
+  "mt-2 block w-full rounded-lg border border-line bg-ash/60 px-4 py-3 text-base text-bone placeholder:text-dust/50 outline-none transition-colors duration-300 focus:border-acid/60 focus:bg-ash";
+
+const labelClass = "font-mono text-xs uppercase tracking-widest text-dust";
 
 const fields = [
   { id: "first-name", label: "First name", type: "text", autoComplete: "given-name", colSpan: false },
@@ -20,7 +22,7 @@ const fields = [
 
 const Field = ({ id, label, type, autoComplete, placeholder, colSpan }) => (
   <div className={colSpan ? "sm:col-span-2" : undefined}>
-    <label htmlFor={id} className="block text-sm font-semibold text-gray-300">{label}</label>
+    <label htmlFor={id} className={labelClass}>{label}</label>
     <input
       id={id}
       name={id}
@@ -60,74 +62,87 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Background & Container */}
-      <div className="isolate flex items-center justify-center px-4 py-16 min-h-screen md:px-6 lg:py-24 bg-gradient-to-b from-black to-indigo-900 relative z-10 rounded-3xl">
-        <div className="bg-slate-800 w-full max-w-lg lg:max-w-2xl p-6 md:p-12 rounded-2xl shadow-lg shadow-gray-600 ">
+    <div id="contact" className="relative z-30 flex flex-col">
+      <div className="flex min-h-screen items-center justify-center rounded-t-[2.5rem] border-t border-line bg-atelier px-4 py-20 md:px-6 lg:py-28">
+        <div className="w-full max-w-2xl">
+          <div className="mb-10 text-center">
+            <div className="mb-4 flex items-center justify-center gap-4">
+              <span className="font-mono text-sm text-acid">04</span>
+              <span className="kicker text-dust">Get in touch</span>
+            </div>
+            <h2 className="font-display display-tight text-5xl font-semibold text-bone sm:text-6xl md:text-7xl">
+              Let&apos;s <span className="italic text-acid">talk</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-md text-sm text-dust">
+              Have a product to build, a role to fill, or an idea worth shipping? Tell me
+              about it — I usually reply within a day.
+            </p>
+          </div>
 
-          {/* Success Message */}
-          {status === 'done' ? (
-            <h1 className="text-2xl md:text-3xl font-semibold text-gray-200 text-center">Thank you for contacting me!</h1>
-          ) : (
-            <form onSubmit={sendEmail} ref={formRef} className="mx-auto">
-
-              {/* Heading */}
-              <div className="text-center mb-6">
-                <small className="text-gray-200 text-md font-bold">I&apos;d love to hear from you</small>
-                <h2 className="text-3xl md:text-5xl font-black text-gray-200 uppercase">Contact Me</h2>
-              </div>
-
-              {/* Honeypot — hidden from real users, catches bots */}
-              <input
-                type="text"
-                name="company"
-                tabIndex={-1}
-                autoComplete="off"
-                aria-hidden="true"
-                className="hidden"
-              />
-
-              {/* Input Fields */}
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {fields.map((field) => (
-                  <Field key={field.id} {...field} />
-                ))}
-
-                {/* Message */}
-                <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-300">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    className={inputClass}
-                  />
+          <div className="rounded-2xl border border-line bg-coal/80 p-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur-sm md:p-10">
+            {status === 'done' ? (
+              <div className="py-10 text-center">
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-acid text-2xl text-ink">
+                  ✓
                 </div>
+                <h3 className="font-display text-2xl font-medium text-bone md:text-3xl">
+                  Thank you for reaching out!
+                </h3>
+                <p className="mt-2 text-sm text-dust">I&apos;ll get back to you soon.</p>
               </div>
+            ) : (
+              <form onSubmit={sendEmail} ref={formRef}>
+                {/* Honeypot — hidden from real users, catches bots */}
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
+                />
 
-              {status === 'error' && (
-                <p className="mt-4 text-center text-sm font-semibold text-red-400">
-                  Something went wrong. Please try again or email me directly.
-                </p>
-              )}
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  {fields.map((field) => (
+                    <Field key={field.id} {...field} />
+                  ))}
 
-              {/* Submit Button */}
-              <div className="mt-8">
+                  <div className="sm:col-span-2">
+                    <label htmlFor="message" className={labelClass}>Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      className={inputClass}
+                    />
+                  </div>
+                </div>
+
+                {status === 'error' && (
+                  <p className="mt-4 text-center font-mono text-xs text-red-400">
+                    Something went wrong. Please try again or email me directly.
+                  </p>
+                )}
+
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full rounded-md bg-indigo-600 px-4 py-3 text-center text-lg font-semibold text-white shadow-md transition hover:bg-indigo-500 focus:outline-indigo-600 disabled:opacity-60"
+                  className="group mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-acid px-6 py-4 font-mono text-sm font-medium uppercase tracking-wider text-ink transition-all duration-300 hover:scale-[1.01] disabled:opacity-60"
                 >
-                  {status === 'sending' ? 'Sending…' : "Let's Talk"}
+                  {status === 'sending' ? 'Sending…' : (
+                    <>
+                      Send message
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </>
+                  )}
                 </button>
-              </div>
-            </form>
-          )}
+              </form>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

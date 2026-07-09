@@ -1,0 +1,72 @@
+[
+  {
+    "category": "Languages & Fundamentals",
+    "items": [
+      { "name": "JavaScript", "logo": "/techStack/JS.png" },
+      { "name": "TypeScript", "logo": "/techStack/TS.png" },
+      { "name": "PHP", "logo": "/techStack/PHP.png" },
+      { "name": "HTML", "logo": "/techStack/html.png" },
+      { "name": "CSS", "logo": "/techStack/css.png" }
+    ]
+  },
+  {
+    "category": "Frontend",
+    "items": [
+      { "name": "React", "logo": "/techStack/react.png" },
+      { "name": "Next.js", "logo": "/techStack/next.png" },
+      { "name": "React Native", "logo": "/techStack/react.png" },
+      { "name": "Redux Toolkit", "logo": "/techStack/Redux.png" },
+      { "name": "Context API" },
+      { "name": "Tailwind", "logo": "/techStack/Tailwind.png" },
+      { "name": "Bootstrap", "logo": "/techStack/Bootstrap.png" },
+      { "name": "ShadCN", "logo": "/techStack/shadcn-ui-seeklogo.png" }
+    ]
+  },
+  {
+    "category": "Backend",
+    "items": [
+      { "name": "Node.js", "logo": "/techStack/Node.js.png" },
+      { "name": "Express", "logo": "/techStack/Express.png" },
+      { "name": "NestJS", "logo": "/techStack/Nest.js.png" },
+      { "name": "Laravel", "logo": "/techStack/Laravel.png" }
+    ]
+  },
+  {
+    "category": "Data & ORM",
+    "items": [
+      { "name": "MongoDB", "logo": "/techStack/Mongo.png" },
+      { "name": "PostgreSQL", "logo": "/techStack/PostgresSQL.png" },
+      { "name": "MySQL", "logo": "/techStack/MYSQL.png" },
+      { "name": "Firebase", "logo": "/techStack/firebase.png" },
+      { "name": "Mongoose", "logo": "/techStack/Mongoose.js.png" },
+      { "name": "Prisma", "logo": "/techStack/prisma.png" }
+    ]
+  },
+  {
+    "category": "AI Engineering",
+    "items": [
+      { "name": "LangChain", "logo": "/techStack/Langchain.png" },
+      { "name": "LangGraph", "logo": "/techStack/langgraph.png" },
+      { "name": "RAG" }
+    ]
+  },
+  {
+    "category": "DevOps & Cloud",
+    "items": [
+      { "name": "AWS S3", "logo": "/techStack/AWS.png" },
+      { "name": "AWS EC2", "logo": "/techStack/AWS.png" },
+      { "name": "CloudFront", "logo": "/techStack/AWS.png" },
+      { "name": "Docker", "logo": "/techStack/Docker.png" },
+      { "name": "GitHub Actions", "logo": "/techStack/GitHub Actions.png" },
+      { "name": "Git", "logo": "/techStack/git.png" },
+      { "name": "GitHub", "logo": "/techStack/github.png" }
+    ]
+  },
+  {
+    "category": "Testing",
+    "items": [
+      { "name": "Jest", "logo": "/techStack/Jest.png" },
+      { "name": "Vitest", "logo": "/techStack/vitest.png" }
+    ]
+  }
+]
