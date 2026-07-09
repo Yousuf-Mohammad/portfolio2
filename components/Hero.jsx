@@ -70,10 +70,10 @@ const Hero = () => {
             className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-line bg-ink/40 px-4 py-1.5 backdrop-blur-md"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-acid" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-acid opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-acid" />
             </span>
-            <span className="kicker text-dust">Available for work · Dhaka</span>
+            <span className="kicker text-dust">Available for work </span>
           </motion.div>
 
           <motion.h1

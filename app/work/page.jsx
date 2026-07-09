@@ -46,7 +46,7 @@ const WorkPage = () => {
             <span className="kicker text-dust">Archive</span>
           </div>
           <h1 className="font-display display-tight text-5xl font-semibold text-bone sm:text-6xl md:text-7xl">
-            All <span className="italic text-acid">work</span>
+            Some Selected <span className="italic text-acid">Works</span>
           </h1>
         </div>
 

@@ -146,7 +146,7 @@ const Projects = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Button linkString="/work" buttonName="Browse all work →" />
+          <Button linkString="/work" buttonName="Browse more works →" />
         </div>
 
         {isDesktop && activeImage && (
