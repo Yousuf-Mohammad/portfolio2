@@ -7,7 +7,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import data from "../public/projects/data.json";
 import Button from './Button';
 
-// Home shows a curated slice; the full set lives at /work.
+// Home shows a curated slice; the full set lives at /projects.
 const HOME_COUNT = 6;
 const featured = data.slice(0, HOME_COUNT);
 
@@ -94,7 +94,7 @@ const Projects = () => {
         <div className="border-t border-line" onMouseLeave={handleMouseLeave}>
           {featured.map((image, index) => (
             <Link
-              href={`/project/${image.id}`}
+              href={`/projects/${image.id}`}
               key={image.id}
               className="group relative flex flex-col gap-4 border-b border-line py-6 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between sm:py-7"
               onMouseEnter={() => handleImageHover(image)}
@@ -146,7 +146,7 @@ const Projects = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Button linkString="/work" buttonName="Browse more works →" />
+          <Button linkString="/projects" buttonName="Browse more works →" />
         </div>
 
         {isDesktop && activeImage && (

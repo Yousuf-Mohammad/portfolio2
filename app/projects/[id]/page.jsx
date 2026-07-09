@@ -336,7 +336,7 @@ const ProjectPage = () => {
           className="mt-24 grid grid-cols-1 gap-3 border-t border-line pt-10 sm:grid-cols-2"
         >
           <Link
-            href={`/project/${prevProject.id}`}
+            href={`/projects/${prevProject.id}`}
             className="group flex items-center gap-4 rounded-2xl border border-line p-5 transition-colors duration-300 hover:border-bone/30 hover:bg-bone/[0.03]"
           >
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-bone transition-all duration-300 group-hover:-translate-x-1 group-hover:border-acid group-hover:bg-acid group-hover:text-ink">
@@ -353,7 +353,7 @@ const ProjectPage = () => {
           </Link>
 
           <Link
-            href={`/project/${nextProject.id}`}
+            href={`/projects/${nextProject.id}`}
             className="group flex items-center justify-end gap-4 rounded-2xl border border-line p-5 text-right transition-colors duration-300 hover:border-bone/30 hover:bg-bone/[0.03]"
           >
             <div className="min-w-0">

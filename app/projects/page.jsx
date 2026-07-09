@@ -77,7 +77,7 @@ const WorkPage = () => {
           {projects.map((project) => (
             <Link
               key={project.id}
-              href={`/project/${project.id}`}
+              href={`/projects/${project.id}`}
               className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-coal/40 p-3 transition-all duration-300 hover:-translate-y-1 hover:border-bone/25"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl ring-1 ring-line">
