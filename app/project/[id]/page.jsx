@@ -187,7 +187,7 @@ const ProjectPage = () => {
             {/* Screenshot */}
             <div className="aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9]">
               <Image
-                src={project.src}
+                src={project.card || project.src}
                 width={1400}
                 height={800}
                 alt={`${project.name} screenshot`}

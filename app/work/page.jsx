@@ -85,7 +85,7 @@ const WorkPage = () => {
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl ring-1 ring-line">
                 <Image
-                  src={project.src}
+                  src={project.card || project.src}
                   alt={project.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
