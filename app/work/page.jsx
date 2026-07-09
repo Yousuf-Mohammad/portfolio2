@@ -44,9 +44,6 @@ const WorkPage = () => {
         <div className="mb-10">
           <div className="mb-4 flex items-center gap-4">
             <span className="kicker text-dust">Archive</span>
-            <span className="font-mono text-sm text-dust">
-              ({String(data.length).padStart(2, "0")})
-            </span>
           </div>
           <h1 className="font-display display-tight text-5xl font-semibold text-bone sm:text-6xl md:text-7xl">
             All <span className="italic text-acid">work</span>

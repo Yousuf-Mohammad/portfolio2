@@ -188,7 +188,7 @@ const ProjectPage = () => {
               <>
                 <span className="text-dust/40">/</span>
                 <span className="inline-flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-acid" /> Live
+                  <span className="h-1.5 w-1.5 rounded-full bg-acid" /> {isMobile ? "Published" : "Live"}
                 </span>
               </>
             )}
@@ -299,9 +299,15 @@ const ProjectPage = () => {
                     rel="noopener noreferrer"
                     className="group flex w-full items-center justify-between gap-2 rounded-full bg-acid px-6 py-3.5 font-mono text-sm font-medium uppercase tracking-wider text-ink transition-transform duration-300 hover:scale-[1.02]"
                   >
-                    Live site
+                    {isMobile ? "Play Store" : "Live site"}
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
+                )}
+                {isMobile && !hasLink && (
+                  <div className="flex w-full items-center justify-between gap-2 rounded-full border border-line px-6 py-3.5 font-mono text-sm uppercase tracking-wider text-dust">
+                    Yet to publish
+                    <span className="h-2 w-2 rounded-full bg-dust/50" />
+                  </div>
                 )}
                 {project.github && (
                   <a

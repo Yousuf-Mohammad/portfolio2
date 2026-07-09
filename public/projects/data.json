@@ -1,109 +1,6 @@
 [
   {
     "id": 1,
-    "src": "/projects/limit-design.png",
-    "card": "/projects/limit-design_card.png",
-    "name": "Limit Design ltd",
-    "category": "frontend",
-    "stack": [
-      "/techStack/react.png",
-      "/techStack/Bootstrap.png",
-      "/techStack/css.png",
-      "/techStack/firebase.png",
-      "/techStack/Scss.png"
-    ],
-    "description": "Developed a modern and responsive portfolio website for Limit Design Ltd, an architecture firm, using React.js, CSS, SCSS, and Bootstrap to ensure a visually appealing and user-friendly interface. The website features seamless authentication powered by Firebase Auth and utilizes Firestore as the database for efficient data management. This project showcases the firm's architectural work while providing an intuitive and engaging user experience. ",
-    "link": "https://limit-design-ltd.netlify.app/"
-  },
-  {
-    "id": 2,
-    "src": "/projects/zentry.jpeg",
-    "card": "/projects/Zentry_Card.png",
-    "name": "Zentry",
-    "category": "frontend",
-    "stack": [
-      "/techStack/react.png",
-      "/techStack/GSAP.png",
-      "/techStack/css.png",
-      "/techStack/Tailwind.png",
-      "/techStack/frameMotion.png"
-    ],
-    "description": "A highly interactive and visually dynamic website for a game, utilizing React.js, GSAP, CSS, Tailwind CSS, and Framer Motion to create a seamless and engaging user experience. The website features advanced animations and interactive elements, enhancing user immersion and bringing the game's essence to life. This project showcases a high level of creativity and technical expertise in front-end development and motion design.",
-    "link": "https://rezentry.netlify.app/",
-    "github": "https://github.com/Yousuf-Mohammad/zentry"
-  },
-  {
-    "id": 3,
-    "src": "/projects/iphone.jpeg",
-    "card": "/projects/Iphone_Card.png",
-    "name": "Iphone-threeJS",
-    "category": "frontend",
-    "stack": [
-      "/techStack/react.png",
-      "/techStack/three-js-seeklogo.png",
-      "/techStack/GSAP.png",
-      "/techStack/css.png",
-      "/techStack/Scss.png",
-      "/techStack/Tailwind.png"
-    ],
-    "description": "Visually immersive website using React.js, GSAP, CSS, SCSS, Tailwind CSS, and Three.js, integrating advanced animations and interactive elements. The website features 3D object rendering, enhancing user engagement and delivering a unique, dynamic experience. This project demonstrates expertise in front-end development, animation, and 3D web technologies.",
-    "link": "https://iphone-threejs.netlify.app/",
-    "github": "https://github.com/Yousuf-Mohammad/iphone-threeJS"
-  },
-  {
-    "id": 4,
-    "src": "/projects/poruaAI.jpeg",
-    "card": "/projects/Porua_card.png",
-    "name": "Porua AI",
-    "category": "ai",
-    "stack": [
-      "/techStack/next.png",
-      "/techStack/Tailwind.png",
-      "/techStack/Clerk_idOESnvCPd_0.png",
-      "/techStack/LangChain.png",
-      "/techStack/GeminiAI.png",
-      "/techStack/convex.png",
-      "/techStack/frameMotion.png",
-      "/techStack/shadcn-ui-seeklogo.png"
-    ],
-    "description": "I developed an AI-powered web application that extracts and organizes notes from PDF files, enhancing productivity and information retrieval. Built with Next.js, Tailwind CSS, ShadCN, and Framer Motion, the app offers a seamless and visually appealing user experience. Clerk is integrated for secure authentication, while Gemini AI and LangChain power the AI-driven note extraction and processing capabilities. This project showcases expertise in AI integration, modern front-end development, and user-centric design",
-    "link": "https://porua-ai.vercel.app/",
-    "github": "https://github.com/Yousuf-Mohammad/PoruaAI/"
-  },
-  {
-    "id": 5,
-    "src": "/projects/musafir.jpeg",
-    "name": "Musafirs Den",
-    "category": "fullstack",
-    "stack": [
-      "/techStack/react.png",
-      "/techStack/Bootstrap.png",
-      "/techStack/css.png",
-      "/techStack/nodeJS.png",
-      "/techStack/Express.png",
-      "/techStack/Mongo.png",
-      "/techStack/Redux.png",
-      "/techStack/jwt.png"
-    ],
-    "description": "Developed a feature-rich e-commerce website tailored for travelers, offering a wide range of adventure tours and travel equipment. The platform is built using React.js, Redux, Bootstrap, and CSS to deliver an interactive and user-friendly shopping experience.For the backend, I implemented Node.js and Express.js, connected to MongoDB for efficient data management. Authentication is secured using JWT and bcrypt, ensuring a safe and seamless user experience. This project highlights expertise in full-stack web development, secure authentication, and e-commerce functionality",
-    "link": "https://musafirs-den.onrender.com/",
-    "github": "https://github.com/Yousuf-Mohammad/MusafirDen"
-  },
-  {
-    "id": 6,
-    "src": "/projects/bangkok.jpeg",
-    "name": "Bangkok Hospital",
-    "category": "fullstack",
-    "stack": [
-      "/techStack/next.png",
-      "/techStack/Tailwind.png",
-      "/techStack/Redux.png"
-    ],
-    "description": "Developed a modern and responsive medical website using Next.js, Tailwind CSS, and Redux, providing detailed information about the hospital's services and enabling users to book appointments seamlessly. The platform is designed for an intuitive user experience, ensuring accessibility and efficiency for patients seeking medical consultations and various healthcare services. This project demonstrates expertise in front-end development, state management, and user-centric design.",
-    "link": "https://www.bangkokhospital.com/en"
-  },
-  {
-    "id": 7,
     "src": "/projects/FCPT.jpeg",
     "card": "/projects/fcpt_Card.png",
     "name": "FE Civil Practice Test",
@@ -124,7 +21,7 @@
     "link": "https://www.fecivilpracticetest.com/"
   },
   {
-    "id": 8,
+    "id": 2,
     "src": "/projects/docuMind.jpeg",
     "card": "/projects/documind_Card.png",
     "name": "Documind",
@@ -143,7 +40,7 @@
     "github": "https://github.com/Yousuf-Mohammad/docuMind"
   },
   {
-    "id": 9,
+    "id": 3,
     "src": "/projects/Salaf.png",
     "card": "/projects/Salaf_card.png",
     "name": "Salaf Global",
@@ -161,7 +58,7 @@
     "link": "https://play.google.com/store/apps/details?id=com.salafglobal.app"
   },
   {
-    "id": 10,
+    "id": 4,
     "src": "/projects/imtr.png",
     "card": "/projects/imtr_student_banner.webp",
     "name": "IMTR",
@@ -178,7 +75,40 @@
     "link": "https://www.imtrbd.org/"
   },
   {
-    "id": 11,
+    "id": 5,
+    "src": "/projects/limit-design.png",
+    "card": "/projects/limit-design_card.png",
+    "name": "Limit Design ltd",
+    "category": "frontend",
+    "stack": [
+      "/techStack/react.png",
+      "/techStack/Bootstrap.png",
+      "/techStack/css.png",
+      "/techStack/firebase.png",
+      "/techStack/Scss.png"
+    ],
+    "description": "Developed a modern and responsive portfolio website for Limit Design Ltd, an architecture firm, using React.js, CSS, SCSS, and Bootstrap to ensure a visually appealing and user-friendly interface. The website features seamless authentication powered by Firebase Auth and utilizes Firestore as the database for efficient data management. This project showcases the firm's architectural work while providing an intuitive and engaging user experience. ",
+    "link": "https://limit-design-ltd.netlify.app/"
+  },
+  {
+    "id": 6,
+    "src": "/projects/zentry.jpeg",
+    "card": "/projects/Zentry_Card.png",
+    "name": "Zentry",
+    "category": "frontend",
+    "stack": [
+      "/techStack/react.png",
+      "/techStack/GSAP.png",
+      "/techStack/css.png",
+      "/techStack/Tailwind.png",
+      "/techStack/frameMotion.png"
+    ],
+    "description": "A highly interactive and visually dynamic website for a game, utilizing React.js, GSAP, CSS, Tailwind CSS, and Framer Motion to create a seamless and engaging user experience. The website features advanced animations and interactive elements, enhancing user immersion and bringing the game's essence to life. This project showcases a high level of creativity and technical expertise in front-end development and motion design.",
+    "link": "https://rezentry.netlify.app/",
+    "github": "https://github.com/Yousuf-Mohammad/zentry"
+  },
+  {
+    "id": 7,
     "src": "/projects/itqaan_card.png",
     "card": "/projects/itqaan_card.png",
     "name": "Itqaan",
@@ -196,7 +126,43 @@
     "link": "https://itqaan.org/"
   },
   {
-    "id": 12,
+    "id": 8,
+    "src": "/projects/opticut_card.png",
+    "card": "/projects/opticut_card.png",
+    "name": "OptiCut",
+    "category": "frontend",
+    "stack": [
+      "/techStack/TS.png",
+      "/techStack/next.png",
+      "/techStack/Tailwind.png",
+      "/techStack/shadcn-ui-seeklogo.png",
+      "/techStack/Jest.png"
+    ],
+    "description": "A free tool that solves the cutting-stock problem to minimize material waste and promote a low-waste society. It computes optimal cutting layouts so users can reduce offcuts and get the most out of their raw materials. The app is built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui, with Jest for testing. This project showcases applied optimization, a clean and accessible interface, and a sustainability-focused mission.",
+    "link": "https://optimize-cut.vercel.app/"
+  },
+  {
+    "id": 9,
+    "src": "/projects/poruaAI.jpeg",
+    "card": "/projects/Porua_card.png",
+    "name": "Porua AI",
+    "category": "ai",
+    "stack": [
+      "/techStack/next.png",
+      "/techStack/Tailwind.png",
+      "/techStack/Clerk_idOESnvCPd_0.png",
+      "/techStack/LangChain.png",
+      "/techStack/GeminiAI.png",
+      "/techStack/convex.png",
+      "/techStack/frameMotion.png",
+      "/techStack/shadcn-ui-seeklogo.png"
+    ],
+    "description": "I developed an AI-powered web application that extracts and organizes notes from PDF files, enhancing productivity and information retrieval. Built with Next.js, Tailwind CSS, ShadCN, and Framer Motion, the app offers a seamless and visually appealing user experience. Clerk is integrated for secure authentication, while Gemini AI and LangChain power the AI-driven note extraction and processing capabilities. This project showcases expertise in AI integration, modern front-end development, and user-centric design",
+    "link": "https://porua-ai.vercel.app/",
+    "github": "https://github.com/Yousuf-Mohammad/PoruaAI/"
+  },
+  {
+    "id": 10,
     "src": "/projects/estore_Card.png",
     "card": "/projects/estore_Card.png",
     "name": "eStore",
@@ -216,7 +182,7 @@
     "link": "https://estore.nukta.app/"
   },
   {
-    "id": 13,
+    "id": 11,
     "src": "/projects/mohiruh_card.webp",
     "card": "/projects/mohiruh_card.webp",
     "name": "Mohiruh",
@@ -233,19 +199,53 @@
     "description": "A financial mobile app built to serve the ummah by promoting Qard Hasana (interest-free good debt) and fostering a community grounded in Islamic values. Users can facilitate and manage interest-free lending, helping people support one another without riba. The app is developed with React Native, Expo, and TypeScript, backed by a Node.js and Express API with MongoDB and AWS S3. This project demonstrates cross-platform mobile development in service of a values-driven community mission."
   },
   {
-    "id": 14,
-    "src": "/projects/opticut_card.png",
-    "card": "/projects/opticut_card.png",
-    "name": "OptiCut",
+    "id": 12,
+    "src": "/projects/iphone.jpeg",
+    "card": "/projects/Iphone_Card.png",
+    "name": "Iphone-threeJS",
     "category": "frontend",
     "stack": [
-      "/techStack/TS.png",
+      "/techStack/react.png",
+      "/techStack/three-js-seeklogo.png",
+      "/techStack/GSAP.png",
+      "/techStack/css.png",
+      "/techStack/Scss.png",
+      "/techStack/Tailwind.png"
+    ],
+    "description": "Visually immersive website using React.js, GSAP, CSS, SCSS, Tailwind CSS, and Three.js, integrating advanced animations and interactive elements. The website features 3D object rendering, enhancing user engagement and delivering a unique, dynamic experience. This project demonstrates expertise in front-end development, animation, and 3D web technologies.",
+    "link": "https://iphone-threejs.netlify.app/",
+    "github": "https://github.com/Yousuf-Mohammad/iphone-threeJS"
+  },
+  {
+    "id": 13,
+    "src": "/projects/musafir.jpeg",
+    "name": "Musafirs Den",
+    "category": "fullstack",
+    "stack": [
+      "/techStack/react.png",
+      "/techStack/Bootstrap.png",
+      "/techStack/css.png",
+      "/techStack/nodeJS.png",
+      "/techStack/Express.png",
+      "/techStack/Mongo.png",
+      "/techStack/Redux.png",
+      "/techStack/jwt.png"
+    ],
+    "description": "Developed a feature-rich e-commerce website tailored for travelers, offering a wide range of adventure tours and travel equipment. The platform is built using React.js, Redux, Bootstrap, and CSS to deliver an interactive and user-friendly shopping experience.For the backend, I implemented Node.js and Express.js, connected to MongoDB for efficient data management. Authentication is secured using JWT and bcrypt, ensuring a safe and seamless user experience. This project highlights expertise in full-stack web development, secure authentication, and e-commerce functionality",
+    "link": "https://musafirs-den.onrender.com/",
+    "github": "https://github.com/Yousuf-Mohammad/MusafirDen"
+  },
+  {
+    "id": 14,
+    "src": "/projects/bangkok.jpeg",
+    "name": "Bangkok Hospital",
+    "category": "fullstack",
+    "stack": [
       "/techStack/next.png",
       "/techStack/Tailwind.png",
-      "/techStack/shadcn-ui-seeklogo.png",
-      "/techStack/Jest.png"
+      "/techStack/Redux.png"
     ],
-    "description": "A free tool that solves the cutting-stock problem to minimize material waste and promote a low-waste society. It computes optimal cutting layouts so users can reduce offcuts and get the most out of their raw materials. The app is built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui, with Jest for testing. This project showcases applied optimization, a clean and accessible interface, and a sustainability-focused mission.",
-    "link": "https://optimize-cut.vercel.app/"
+    "description": "Developed a modern and responsive medical website using Next.js, Tailwind CSS, and Redux, providing detailed information about the hospital's services and enabling users to book appointments seamlessly. The platform is designed for an intuitive user experience, ensuring accessibility and efficiency for patients seeking medical consultations and various healthcare services. This project demonstrates expertise in front-end development, state management, and user-centric design.",
+    "link": "https://www.bangkokhospital.com/en"
   }
 ]

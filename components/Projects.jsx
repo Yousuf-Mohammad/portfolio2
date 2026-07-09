@@ -89,9 +89,6 @@ const Projects = () => {
               Things I&apos;ve <span className="italic text-acid">built</span>
             </h2>
           </div>
-          <span className="hidden font-mono text-sm text-dust sm:block">
-            ({String(data.length).padStart(2, '0')})
-          </span>
         </div>
 
         <div className="border-t border-line" onMouseLeave={handleMouseLeave}>
@@ -122,7 +119,7 @@ const Projects = () => {
                   src={image.src}
                   width={300}
                   height={400}
-                  className="h-52 w-full rounded-xl object-cover ring-1 ring-line"
+                  className="h-52 w-full rounded-xl object-cover object-top ring-1 ring-line"
                   alt={image.name}
                   loading="lazy"
                   placeholder="blur"
@@ -156,7 +153,7 @@ const Projects = () => {
           <img
             src={activeImage.src}
             alt={activeImage.name}
-            className="pointer-events-none fixed z-30 h-[340px] w-[260px] rounded-2xl object-cover shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] ring-1 ring-white/15"
+            className="pointer-events-none fixed z-30 h-[340px] w-[260px] rounded-2xl object-cover object-top shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] ring-1 ring-white/15"
             style={{
               left: `${cursorPosition.x}px`,
               top: `${cursorPosition.y}px`,
