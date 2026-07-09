@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useSpring } from "motion/react";
@@ -25,6 +25,35 @@ const hostnameOf = (url) => {
   } catch {
     return null;
   }
+};
+
+// Renders a tech-stack chip. If the logo file is missing/fails to load,
+// the icon is dropped and only the label is shown.
+const TechChip = ({ tech }) => {
+  const [hasIcon, setHasIcon] = useState(true);
+  const label = prettyTech(tech);
+  return (
+    <div
+      className={`group/chip flex items-center gap-2 rounded-full border border-line bg-bone/[0.03] py-1.5 pr-3.5 transition-colors duration-300 hover:border-acid/40 hover:bg-bone/[0.06] ${
+        hasIcon ? "pl-1.5" : "pl-3.5"
+      }`}
+    >
+      {hasIcon && (
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-bone/95 p-1">
+          <Image
+            src={tech}
+            width={28}
+            height={28}
+            alt={label}
+            className="h-full w-full object-contain"
+            loading="lazy"
+            onError={() => setHasIcon(false)}
+          />
+        </span>
+      )}
+      <span className="font-mono text-xs text-bone">{label}</span>
+    </div>
+  );
 };
 
 const ProjectPage = () => {
@@ -61,6 +90,8 @@ const ProjectPage = () => {
   const nextProject = data[(index + 1) % data.length];
   const prevProject = data[(index - 1 + data.length) % data.length];
   const host = hostnameOf(project.link);
+  const hasLink = Boolean(project.link) && project.link !== "#";
+  const isMobile = project.category === "mobile";
   const total = String(data.length).padStart(2, "0");
   const current = String(index + 1).padStart(2, "0");
 
@@ -149,53 +180,65 @@ const ProjectPage = () => {
                 {host}
               </a>
             )}
-            <span className="text-dust/40">/</span>
+            {host && <span className="text-dust/40">/</span>}
             <span>
               {project.stack?.length || 0} {project.stack?.length === 1 ? "technology" : "technologies"}
             </span>
-            <span className="text-dust/40">/</span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-acid" /> Live
-            </span>
+            {hasLink && (
+              <>
+                <span className="text-dust/40">/</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-acid" /> Live
+                </span>
+              </>
+            )}
           </motion.div>
         </header>
 
         {/* Feature image in a browser frame */}
         {project.src && (
-          <motion.a
-            variants={reveal}
-            initial="hidden"
-            animate="show"
-            custom={4}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative mb-16 block overflow-hidden rounded-2xl border border-line bg-coal shadow-[0_40px_120px_-50px_rgba(0,0,0,0.9)]"
-          >
-            {/* Browser chrome */}
-            <div className="flex items-center gap-2 border-b border-line bg-ash/70 px-4 py-3">
-              <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-              <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
-              <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-              <div className="ml-3 hidden flex-1 items-center justify-center gap-2 rounded-md bg-ink/60 px-3 py-1 sm:flex">
-                <span className="font-mono text-[11px] text-dust">{host || project.link}</span>
-              </div>
-              <span className="ml-auto hidden items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-dust transition-colors group-hover:text-acid sm:flex">
-                Open <ArrowUpRight className="h-3.5 w-3.5" />
-              </span>
-            </div>
-            {/* Screenshot */}
-            <div className="aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9]">
-              <Image
-                src={project.card || project.src}
-                width={1400}
-                height={800}
-                alt={`${project.name} screenshot`}
-                priority
-                className="h-full w-full object-cover object-top transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
-              />
-            </div>
-          </motion.a>
+          (() => {
+            const Frame = hasLink ? motion.a : motion.div;
+            const frameProps = hasLink
+              ? { href: project.link, target: "_blank", rel: "noopener noreferrer" }
+              : {};
+            return (
+              <Frame
+                variants={reveal}
+                initial="hidden"
+                animate="show"
+                custom={4}
+                {...frameProps}
+                className="group relative mb-16 block overflow-hidden rounded-2xl border border-line bg-coal shadow-[0_40px_120px_-50px_rgba(0,0,0,0.9)]"
+              >
+                {/* Browser chrome */}
+                <div className="flex items-center gap-2 border-b border-line bg-ash/70 px-4 py-3">
+                  <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+                  <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+                  <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+                  <div className="ml-3 hidden flex-1 items-center justify-center gap-2 rounded-md bg-ink/60 px-3 py-1 sm:flex">
+                    <span className="font-mono text-[11px] text-dust">{host || project.name}</span>
+                  </div>
+                  {hasLink && (
+                    <span className="ml-auto hidden items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-dust transition-colors group-hover:text-acid sm:flex">
+                      Open <ArrowUpRight className="h-3.5 w-3.5" />
+                    </span>
+                  )}
+                </div>
+                {/* Screenshot */}
+                <div className="aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9]">
+                  <Image
+                    src={project.card || project.src}
+                    width={1400}
+                    height={800}
+                    alt={`${project.name} screenshot`}
+                    priority
+                    className="h-full w-full object-cover object-top transition-transform [transition-duration:1.4s] ease-out group-hover:scale-[1.05]"
+                  />
+                </div>
+              </Frame>
+            );
+          })()
         )}
 
         {/* Body: overview + sticky details */}
@@ -240,42 +283,26 @@ const ProjectPage = () => {
                     <span className="text-acid">02</span> Built with
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {project.stack.map((tech, i) => {
-                      const label = prettyTech(tech);
-                      return (
-                        <div
-                          key={i}
-                          className="group/chip flex items-center gap-2 rounded-full border border-line bg-bone/[0.03] py-1.5 pl-1.5 pr-3.5 transition-colors duration-300 hover:border-acid/40 hover:bg-bone/[0.06]"
-                        >
-                          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-bone/95 p-1">
-                            <Image
-                              src={tech}
-                              width={28}
-                              height={28}
-                              alt={label}
-                              className="h-full w-full object-contain"
-                              loading="lazy"
-                            />
-                          </span>
-                          <span className="font-mono text-xs text-bone">{label}</span>
-                        </div>
-                      );
-                    })}
+                    {project.stack.map((tech, i) => (
+                      <TechChip key={i} tech={tech} />
+                    ))}
                   </div>
                 </div>
               )}
 
               {/* Links */}
               <div className="space-y-3 border-t border-line pt-6">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex w-full items-center justify-between gap-2 rounded-full bg-acid px-6 py-3.5 font-mono text-sm font-medium uppercase tracking-wider text-ink transition-transform duration-300 hover:scale-[1.02]"
-                >
-                  Live site
-                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
+                {hasLink && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex w-full items-center justify-between gap-2 rounded-full bg-acid px-6 py-3.5 font-mono text-sm font-medium uppercase tracking-wider text-ink transition-transform duration-300 hover:scale-[1.02]"
+                  >
+                    Live site
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                )}
                 {project.github && (
                   <a
                     href={project.github}

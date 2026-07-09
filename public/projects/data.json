@@ -60,7 +60,8 @@
       "/techStack/next.png",
       "/techStack/Tailwind.png",
       "/techStack/Clerk_idOESnvCPd_0.png",
-      "/techStack/LangChain_id12EQi2QW_0.png",
+      "/techStack/LangChain.png",
+      "/techStack/GeminiAI.png",
       "/techStack/convex.png",
       "/techStack/frameMotion.png",
       "/techStack/shadcn-ui-seeklogo.png"
@@ -103,83 +104,148 @@
   },
   {
     "id": 7,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 7",
+    "src": "/projects/FCPT.jpeg",
+    "card": "/projects/fcpt_Card.png",
+    "name": "FE Civil Practice Test",
     "category": "fullstack",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "stack": [
+      "/techStack/TS.png",
+      "/techStack/next.png",
+      "/techStack/Express.png",
+      "/techStack/Mongo.png",
+      "/techStack/Mongoose.js.png",
+      "/techStack/Stripe.png",
+      "/techStack/jwt.png",
+      "/techStack/Tailwind.png",
+      "/techStack/Redux.png",
+      "/techStack/AWS.png"
+    ],
+    "description": "Built a full-stack online exam platform for the FE Civil engineering exam, delivering realistic, timed practice tests with detailed performance analytics. The application is developed with Next.js, TypeScript, and Tailwind CSS on the front end, backed by an Express.js and MongoDB (Mongoose) API with JWT authentication and Redux for state management. It integrates Stripe for subscription payments and AWS S3 for media storage, and ships a Notion-style rich-text editor that lets admins author and publish blog-like study content. This project demonstrates expertise in scalable full-stack architecture, payment integration, and content-management tooling.",
+    "link": "https://www.fecivilpracticetest.com/"
   },
   {
     "id": 8,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 8",
+    "src": "/projects/docuMind.jpeg",
+    "card": "/projects/documind_Card.png",
+    "name": "Documind",
     "category": "ai",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "stack": [
+      "/techStack/next.png",
+      "/techStack/TS.png",
+      "/techStack/nodeJS.png",
+      "/techStack/Express.png",
+      "/techStack/Mongo.png",
+      "/techStack/Langchain.png",
+      "/techStack/Groq.png",
+      "/techStack/convex.png"
+    ],
+    "description": "Developed a full-stack AI platform that lets users upload PDFs and query their content through natural-language conversation. The app uses Retrieval Augmented Generation (RAG) to perform semantic search over document embeddings and return accurate, context-aware answers. It is built with Next.js and TypeScript on the front end, a Node.js and Express backend with MongoDB, and Convex for real-time data, while LangChain and Groq power the document processing and fast LLM inference. This project showcases applied AI engineering, RAG pipelines, and modern full-stack development.",
+    "github": "https://github.com/Yousuf-Mohammad/docuMind"
   },
   {
     "id": 9,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 9",
-    "category": "frontend",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "src": "/projects/Salaf.png",
+    "card": "/projects/Salaf_card.png",
+    "name": "Salaf Global",
+    "category": "mobile",
+    "stack": [
+      "/techStack/react.png",
+      "/techStack/nodeJS.png",
+      "/techStack/Express.png",
+      "/techStack/Mongo.png",
+      "/techStack/NativeWind.png",
+      "/techStack/Sentry.png",
+      "/techStack/TS.png"
+    ],
+    "description": "Built a smart mobile platform that helps advertisers and agencies manage their advertising accounts efficiently from a single dashboard. Users can monitor ad account balances, perform top-ups, track deposits and withdrawals, and manage Business Manager connections, helping teams stay organized and avoid costly account interruptions. The app is developed with React Native, TypeScript, and NativeWind, backed by a Node.js and Express API with MongoDB and Sentry for production monitoring. This project highlights cross-platform mobile development and the design of reliable financial-operations tooling.",
+    "link": "https://play.google.com/store/apps/details?id=com.salafglobal.app"
   },
   {
     "id": 10,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 10",
+    "src": "/projects/imtr.png",
+    "card": "/projects/imtr_student_banner.webp",
+    "name": "IMTR",
     "category": "fullstack",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "stack": [
+      "/techStack/next.png",
+      "/techStack/TS.png",
+      "/techStack/Laravel.png",
+      "/techStack/PHP.png",
+      "/techStack/MySQL.png",
+      "/techStack/SSLCommerz.png"
+    ],
+    "description": "Developed a corporate Learning Management System (LMS) with role-based access control (RBAC) dashboards tailored to administrators, instructors, and learners. The platform features a coupon and discount system, automated certificate generation on course completion, and secure payments through SSLCommerz. It is built with Next.js and TypeScript on the front end and a Laravel (PHP) and MySQL backend, delivering a robust and scalable training solution. This project demonstrates expertise in access control, payment integration, and enterprise full-stack development.",
+    "link": "https://www.imtrbd.org/"
   },
   {
     "id": 11,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 11",
-    "category": "mobile",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "src": "/projects/itqaan_card.png",
+    "card": "/projects/itqaan_card.png",
+    "name": "Itqaan",
+    "category": "fullstack",
+    "stack": [
+      "/techStack/next.png",
+      "/techStack/TS.png",
+      "/techStack/Laravel.png",
+      "/techStack/PHP.png",
+      "/techStack/MySQL.png",
+      "/techStack/SSLCommerz.png",
+      "/techStack/Bootstrap.png"
+    ],
+    "description": "Contributed to Itqaan, an Islamic learning platform serving thousands of learners daily, by developing a full-stack coupon system, course-detail pages, review functionality, and an admin analytics dashboard. The platform is built with Next.js and TypeScript on the front end and a Laravel (PHP) and MySQL backend, with Bootstrap for styling and SSLCommerz for secure payments. This project demonstrates expertise in scalable LMS features, e-commerce logic, and data-driven admin tooling.",
+    "link": "https://itqaan.org/"
   },
   {
     "id": 12,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 12",
-    "category": "ai",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "src": "/projects/estore_Card.png",
+    "card": "/projects/estore_Card.png",
+    "name": "eStore",
+    "category": "fullstack",
+    "stack": [
+      "/techStack/next.png",
+      "/techStack/TS.png",
+      "/techStack/Tailwind.png",
+      "/techStack/nodeJS.png",
+      "/techStack/Express.png",
+      "/techStack/Mongo.png",
+      "/techStack/Mongoose.js.png",
+      "/techStack/AWS.png",
+      "/techStack/Jest.png"
+    ],
+    "description": "Built a full-stack e-commerce platform featuring product variants, cart, wishlist, checkout flows, order history, and a complete management dashboard. It is developed with Next.js, TypeScript, and Tailwind CSS on the front end, backed by a Node.js and Express API with MongoDB (Mongoose), AWS S3 for media storage, and Jest for testing. This project highlights end-to-end e-commerce architecture, reliable state and order management, and a tested, maintainable codebase.",
+    "link": "https://estore.nukta.app/"
   },
   {
     "id": 13,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 13",
-    "category": "fullstack",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "src": "/projects/mohiruh_card.webp",
+    "card": "/projects/mohiruh_card.webp",
+    "name": "Mohiruh",
+    "category": "mobile",
+    "stack": [
+      "/techStack/react.png",
+      "/techStack/TS.png",
+      "/techStack/nodeJS.png",
+      "/techStack/Express.png",
+      "/techStack/Mongo.png",
+      "/techStack/AWS.png",
+      "/techStack/Expo.png"
+    ],
+    "description": "A financial mobile app built to serve the ummah by promoting Qard Hasana (interest-free good debt) and fostering a community grounded in Islamic values. Users can facilitate and manage interest-free lending, helping people support one another without riba. The app is developed with React Native, Expo, and TypeScript, backed by a Node.js and Express API with MongoDB and AWS S3. This project demonstrates cross-platform mobile development in service of a values-driven community mission."
   },
   {
     "id": 14,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 14",
+    "src": "/projects/opticut_card.png",
+    "card": "/projects/opticut_card.png",
+    "name": "OptiCut",
     "category": "frontend",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
-  },
-  {
-    "id": 15,
-    "src": "/projects/zentry.jpeg",
-    "name": "New Project 15",
-    "category": "mobile",
-    "stack": [],
-    "description": "TODO — replace with a real project description.",
-    "link": "#"
+    "stack": [
+      "/techStack/TS.png",
+      "/techStack/next.png",
+      "/techStack/Tailwind.png",
+      "/techStack/shadcn-ui-seeklogo.png",
+      "/techStack/Jest.png"
+    ],
+    "description": "A free tool that solves the cutting-stock problem to minimize material waste and promote a low-waste society. It computes optimal cutting layouts so users can reduce offcuts and get the most out of their raw materials. The app is built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui, with Jest for testing. This project showcases applied optimization, a clean and accessible interface, and a sustainability-focused mission.",
+    "link": "https://optimize-cut.vercel.app/"
   }
 ]
