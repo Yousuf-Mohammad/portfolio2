@@ -5,7 +5,7 @@ import Image from "next/image";
 import BentoCard from "./BentoCard";
 
 const experiences = [
-  { company: "Nukta Solutions", role: "Jr. Software Engineer", duration: "Apr 2025 — Present", logo: "/nukta.svg" },
+  { company: "Nukta Solutions", role: " Software Engineer", duration: "Apr 2025 — Present", logo: "/nukta.svg" },
   { company: "Avenir IT", role: "Jr. Frontend Developer", duration: "Sep 2024 — Mar 2025", logo: "/aveenir.png" },
   { company: "VAST", role: "Web Developer (Contractual)", duration: "Nov 2023 — Sep 2024", logo: "/vast.jpg" },
 ];
